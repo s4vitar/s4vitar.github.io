@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-29T04:01:08+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">Exposición de datos médicos en hospitales</title><link href="http://localhost:4000/hospital-dicom-exposure/" rel="alternate" type="text/html" title="Exposición de datos médicos en hospitales" /><published>2020-01-29T00:00:00+00:00</published><updated>2020-01-29T00:00:00+00:00</updated><id>http://localhost:4000/hospital-dicom-exposure</id><content type="html" xml:base="http://localhost:4000/hospital-dicom-exposure/">&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Durante los últimos meses, hemos visto noticias por todos lados de datos médicos que han quedado expuestos por internet de numerosos hospitales. Es algo alarmante pero no sorprendente teniendo en cuenta cómo está la seguridad a día de hoy.&lt;/p&gt;
+
+&lt;p&gt;En el siguiente artículo, os explico en qué consiste este “gran fallo” que hace que estos datos queden expuestos al alcance de cualquiera&lt;/p&gt;
+
+&lt;h2 id=&quot;antecedentes&quot;&gt;Antecedentes&lt;/h2&gt;
+
+&lt;p&gt;La creciente tendencia hacia la digitalización de los hospitales, especialmente en el diagnóstico  por imagen, y la necesidad de comunicaciones médicas, ha puesto de relieve la necesidad de estandarizar los protocolos de comunicación y los formatos de la información en sanidad.&lt;/p&gt;
+
+&lt;p&gt;Uno de los estándares más exitosos hasta la fecha es &lt;strong&gt;DICOM&lt;/strong&gt; (siglas de Digital Imaging and Communications in Medicine).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-diagrama.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DICOM&lt;/strong&gt; es un protocolo estándar de comunicación entre sistemas de información y a la vez un formato de almacenamiento de imágenes médicas que aparece como solución a los problemas de interoperabilidad entre tipos de dispositivos.&lt;/p&gt;
+
+&lt;p&gt;Una imagen médica por sí misma no aporta suficiente información. Para que sea correctamente interpretada es necesario que vaya acompañada de datos del paciente y de la adquisición. Por eso formatos tradicionales como el .jpeg o el .png se quedan cortos.&lt;/p&gt;
+
+&lt;h2 id=&quot;dónde-está-el-problema-de-todo-esto&quot;&gt;¿Dónde está el problema de todo esto?&lt;/h2&gt;
+
+&lt;p&gt;El problema reside en que una gran cantidad de estos servicios están expuestos en internet, accesibles desde Shodan:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-shodan.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Asimismo, para los que ya hayáis usado Shodan otras veces… como bien sabréis, es posible hasta ajustar nuestras queries con ciertos parámetros adicionales:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-shodan-filter.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Y aquí es donde viene la pregunta, ¿cómo me conecto ahora al servicio?.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Radiant DICOM Viewer&lt;/strong&gt; es una aplicación para el procesamiento y visualizacion de imágenes médicas en formato DICOM. El visor permite a los usuarios abrir los estudios de CD / DVD / discos BluRay, la memoria flash, carpetas locales y de red.&lt;/p&gt;
+
+&lt;p&gt;Puedes descargar el Software con un periodo de prueba de 30 días a través del siguiente enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.radiantviewer.com/es/&quot;&gt;Descargar Software&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Como podrás intuir, efectivamente… es a través de esta aplicación con la que nos podremos autenticar contra estos servidores.&lt;/p&gt;
+
+&lt;p&gt;Para evitar problemas, no explicaré el procedimiento para llevar a cabo la asociación… porque obviamente hay que toquetear ciertas cosas y cambiar algunos métodos que ya vienen por defecto configurados con otros valores. Lo que sí que os puedo decir es que es ya desde este Software con el que nos podemos asociar tranquilamente a estos servidores.&lt;/p&gt;
+
+&lt;p&gt;Os voy a mostrar un ejemplo de qué es lo que se ve una vez estamos asociados a uno de ellos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-connected.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como podréis ver, se obtiene una lista de todos los pacientes (134 pacientes) el centro médico en cuestión. Figuran numerosos campos, entre ellos el nombre del paciente, el tipo de reconocimiento médico que se está aplicando, su fecha de nacimiento, datos de contacto más a la derecha como DNI, número de teléfono, etc.&lt;/p&gt;
+
+&lt;p&gt;Como os dije anteriormente, &lt;strong&gt;Radiant DICOM Viewer&lt;/strong&gt; sirve para procesar y visualizar imágenes médicas en formato DICOM. En caso de querer ver estas imágenes médicas, basta con hacer doble click en el paciente cuyos informes médicos queramos consultar y listo:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-radiografia.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al tratarse de una imagen, en este artículo no se aprecia, pero cada muestra viene acompañada de múltiples capturas, pudiendo ver una animación de la resonancia al presionar la tecla &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enter&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;De hecho, en caso de que una muestra posea múltiples capturas, se puede hacer incluso un modelaje 3D en base a los resultados obtenidos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-3d.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;qué-demonios-está-pasando-aquí&quot;&gt;¿Qué demonios está pasando aquí?&lt;/h2&gt;
+
+&lt;p&gt;Muy buena pregunta, porque hasta yo mismo lo desconozco. Hasta donde he podido leer, todos estos servidores DICOM al parecer están expuestos públicamente con el objetivo de agilizar el “traspaso del historial médico de un paciente” de un centro médico a otro.&lt;/p&gt;
+
+&lt;p&gt;Es decir, imagina que por algún casual te tienen que enviar a otro hospital… pues en vez de enviar los resultados por correo (que tampoco sería óptimo), lo que hacen es transferir el expediente mediante el protocolo DICOM públicamente desde el propio centro médico al nuevo hospital. De hecho ni hace falta transferir datos, porque con tener la IP pública es simplemente asociarse y ya poder sacar el listado de pacientes, te buscarían y listo.&lt;/p&gt;
+
+&lt;p&gt;La verdadera “cagada” por decirlo de alguna forma de todo esto, es que DICOM no cuenta con una fase de autenticación, por lo que si está expuesto públicamente, no es necesario proporcionar usuario y contraseña para asociarse.&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="hospitales" /><category term="dicom" /><category term="radiant" /><summary type="html">Durante los últimos meses, hemos visto noticias por todos lados de datos médicos que han quedado expuestos por internet de numerosos hospitales. Es algo alarmante pero no sorprendente teniendo en cuenta cómo está la seguridad a día de hoy. En el siguiente artículo, os explico en qué consiste este `gran fallo` que hace que estos datos queden expuestos al alcance de cualquiera.</summary></entry></feed>
