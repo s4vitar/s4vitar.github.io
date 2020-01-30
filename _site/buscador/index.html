@@ -9,16 +9,16 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>s4vitar.io</title>
+<!-- begin _includes/seo.html --><title>Buscador general de palabras clave - s4vitar.io</title>
 <meta name="description" content="Artículos sobre ciberseguridad, CTFs e investigaciones">
 
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="s4vitar.io">
-<meta property="og:title" content="s4vitar.io">
-<meta property="og:url" content="http://localhost:4000/404/">
+<meta property="og:title" content="Buscador general de palabras clave">
+<meta property="og:url" content="http://localhost:4000/buscador/">
 
 
 
@@ -26,6 +26,8 @@
 
 
 
+
+  <meta property="article:published_time" content="2020-01-29T00:00:00+00:00">
 
 
 
@@ -36,7 +38,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/404/">
+<link rel="canonical" href="http://localhost:4000/buscador/">
 
 
 
@@ -100,7 +102,7 @@
 
   </head>
 
-  <body class="layout--default">
+  <body class="layout--search">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -141,25 +143,47 @@
     
 
     <div class="initial-content">
-      <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+      
 
-<div class="container">
-  <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">Buscador general de palabras clave</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Buscador general de palabras clave</h1>
+    
+
+    
+<input type="text" id="search" class="search-input" tabindex="-1" placeholder="Introduce tu palabra clave aquí..." />
+        <div id="results" class="results"></div></div>
 </div>
 
     </div>
@@ -192,6 +216,10 @@
 
 
 
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
