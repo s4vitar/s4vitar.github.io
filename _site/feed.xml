@@ -1,4 +1,410 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-30T00:58:25+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">Exposición de datos médicos en hospitales</title><link href="http://localhost:4000/hospital-dicom-exposure/" rel="alternate" type="text/html" title="Exposición de datos médicos en hospitales" /><published>2020-01-29T00:00:00+00:00</published><updated>2020-01-29T00:00:00+00:00</updated><id>http://localhost:4000/hospital-dicom-exposure</id><content type="html" xml:base="http://localhost:4000/hospital-dicom-exposure/">&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-30T11:04:13+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">Archivos de configuración de Bspwm</title><link href="http://localhost:4000/bspwm-configuration-files/" rel="alternate" type="text/html" title="Archivos de configuración de Bspwm" /><published>2020-01-30T00:00:00+00:00</published><updated>2020-01-30T00:00:00+00:00</updated><id>http://localhost:4000/bspwm-configuration-files</id><content type="html" xml:base="http://localhost:4000/bspwm-configuration-files/">&lt;p&gt;&lt;img src=&quot;/assets/images/bspwm/bspwm-background.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para el que no sepa de lo que estamos hablando, toda la configuración que se define en este artículo es la detallada en el siguiente vídeo mi canal de YouTube:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=MF4qRSedmEs&quot;&gt;Cómo configurar un buen entorno de trabajo en Linux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Algunos de vosotros me habéis contactado pidiéndome que subiera los archivos de configuración a algún sitio, dado que a pesar de seguir mis pasos, os aparecían errores en ciertas cosas.&lt;/p&gt;
+
+&lt;p&gt;Para el que lo quiera tomar en consideración, por aquí os dejo las especificaciones de mi sistema operativo:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌─[s4vitar@parrot]─[~]
+└──╼ &lt;span class=&quot;nv&quot;&gt;$uname&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;
+Linux parrot 5.2.0-2parrot1-amd64 &lt;span class=&quot;c&quot;&gt;#1 SMP Debian 5.2.9-2parrot1 (2019-08-25) x86_64 GNU/Linux&lt;/span&gt;
+┌─[s4vitar@parrot]─[~]
+└──╼ &lt;span class=&quot;nv&quot;&gt;$lsb_release&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;
+No LSB modules are available.
+Distributor ID:	Parrot
+Description:	Parrot GNU/Linux 4.7
+Release:	4.7
+Codename:	n/a
+┌─[s4vitar@parrot]─[~]
+└──╼ &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;archivo-bspwmrc&quot;&gt;Archivo bspwmrc&lt;/h2&gt;
+
+&lt;p&gt;Este sería el archivo de configuración situado bajo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/bspwm&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#! /bin/sh&lt;/span&gt;
+
+sxhkd &amp;amp;
+compton &lt;span class=&quot;nt&quot;&gt;--config&lt;/span&gt; /home/s4vitar/.config/compton/compton.conf &amp;amp;
+feh &lt;span class=&quot;nt&quot;&gt;--bg-fill&lt;/span&gt; /home/s4vitar/Desktop/s4vitar/Images/Helado.jpg &amp;amp;
+wmname LG3D &amp;amp;
+~/.config/polybar/launch.sh &amp;amp;
+
+bspc config pointer_modifier mod1
+
+bspc monitor &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   &lt;span class=&quot;nb&quot;&gt;true
+&lt;/span&gt;bspc config gapless_monocle      &lt;span class=&quot;nb&quot;&gt;true
+
+&lt;/span&gt;bspc rule &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; Gimp &lt;span class=&quot;nv&quot;&gt;desktop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'^8'&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;floating &lt;span class=&quot;nv&quot;&gt;follow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;on
+bspc rule &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; Chromium &lt;span class=&quot;nv&quot;&gt;desktop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'^2'&lt;/span&gt;
+bspc rule &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; mplayer2 &lt;span class=&quot;nv&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;floating
+bspc rule &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; Kupfer.py &lt;span class=&quot;nv&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;on
+bspc rule &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; Screenkey &lt;span class=&quot;nv&quot;&gt;manage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;off
+bspc rule &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; burp-StartBurp: &lt;span class=&quot;nv&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;floating
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;archivo-bspwm_resize&quot;&gt;Archivo bspwm_resize&lt;/h2&gt;
+
+&lt;p&gt;Este sería el archivo de configuración situado bajo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/bspwm/scripts/&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env dash&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;bspc query &lt;span class=&quot;nt&quot;&gt;-N&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; focused.floating &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+	&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;20
+&lt;span class=&quot;k&quot;&gt;else
+	&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100
+&lt;span class=&quot;k&quot;&gt;fi
+
+case&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in
+	&lt;/span&gt;west&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;right&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;falldir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;left&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$step&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0&lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+	east&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;right&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;falldir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;left&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$step&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0&lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+	north&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;top&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;falldir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;bottom&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$step&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+	south&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;top&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;falldir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;bottom&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$step&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;esac&lt;/span&gt;
+
+bspc node &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$y&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; bspc node &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$falldir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$y&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;archivo-comptonconf&quot;&gt;Archivo compton.conf&lt;/h2&gt;
+
+&lt;p&gt;Este sería el archivo de configuración situado bajo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/compton&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;active-opacity &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0.95&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+inactive-opacity &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0.80&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+frame-opacity &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0.80&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+backend &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;glx&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+opacity-rule &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;50:class_g = 'Bspwm' &amp;amp;&amp;amp; class_i = 'presel_feedback'&quot;&lt;/span&gt;,
+	&lt;span class=&quot;s2&quot;&gt;&quot;80:class_g = 'Rofi'&quot;&lt;/span&gt;,
+	&lt;span class=&quot;s2&quot;&gt;&quot;80:class_g = 'Caja'&quot;&lt;/span&gt;,
+	&lt;span class=&quot;s2&quot;&gt;&quot;99:class_g = 'Google-chrome'&quot;&lt;/span&gt;,
+	&lt;span class=&quot;s2&quot;&gt;&quot;99:class_g = 'burp-StartBurp'&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+blur-background &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;archivo-sxhkdrc&quot;&gt;Archivo sxhkdrc&lt;/h2&gt;
+
+&lt;p&gt;Este sería el archivo de configuración situado bajo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/sxhkd&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# wm independent hotkeys&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# terminal emulator&lt;/span&gt;
+super + Return
+	gnome-terminal
+
+&lt;span class=&quot;c&quot;&gt;# program launcher&lt;/span&gt;
+super + d
+	rofi &lt;span class=&quot;nt&quot;&gt;-show&lt;/span&gt; run
+
+&lt;span class=&quot;c&quot;&gt;# make sxhkd reload its configuration files:&lt;/span&gt;
+super + Escape
+	pkill &lt;span class=&quot;nt&quot;&gt;-USR1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; sxhkd
+
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# bspwm hotkeys&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# quit/restart bspwm&lt;/span&gt;
+super + alt + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;q,r&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;quit,wm &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# close and kill&lt;/span&gt;
+super + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;_,shift + &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;w
+	bspc node -&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;c,k&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# alternate between the tiled and monocle layout&lt;/span&gt;
+super + m
+	bspc desktop &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; next
+
+&lt;span class=&quot;c&quot;&gt;# send the newest marked node to the newest preselected node&lt;/span&gt;
+super + y
+	bspc node newest.marked.local &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; newest.!automatic.local
+
+&lt;span class=&quot;c&quot;&gt;# swap the current node and the biggest node&lt;/span&gt;
+super + g
+	bspc node &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; biggest
+
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# state/flags&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# set the window state&lt;/span&gt;
+super + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;t,shift + t,s,f&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc node &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;tiled,pseudo_tiled,floating,fullscreen&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# set the node flags&lt;/span&gt;
+super + ctrl + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;m,x,y,z&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc node &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;marked,locked,sticky,private&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# focus/swap&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# focus the node in the given direction&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#super + {_,shift + }{h,j,k,l}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#	bspc node -{f,s} {west,south,north,east}&lt;/span&gt;
+
+super + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;_,shift + &lt;span class=&quot;o&quot;&gt;}{&lt;/span&gt;Left,Down,Up,Right&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+       bspc node -&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;f,s&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;west,south,north,east&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# focus the node for the given path jump&lt;/span&gt;
+super + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;p,b,comma,period&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc node &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; @&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;parent,brother,first,second&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# focus the next/previous node in the current desktop&lt;/span&gt;
+super + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;_,shift + &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;c
+	bspc node &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;next,prev&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;.local
+
+&lt;span class=&quot;c&quot;&gt;# focus the next/previous desktop in the current monitor&lt;/span&gt;
+super + bracket&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;left,right&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc desktop &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;prev,next&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;.local
+
+&lt;span class=&quot;c&quot;&gt;# focus the last node/desktop&lt;/span&gt;
+super + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;grave,Tab&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;node,desktop&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; last
+
+&lt;span class=&quot;c&quot;&gt;# focus the older or newer node in the focus history&lt;/span&gt;
+super + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;o,i&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc wm &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; off&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+	bspc node &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;older,newer&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+	bspc wm &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; on
+
+&lt;span class=&quot;c&quot;&gt;# focus or send to the given desktop&lt;/span&gt;
+super + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;_,shift + &lt;span class=&quot;o&quot;&gt;}{&lt;/span&gt;1-9,0&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;desktop &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt;,node &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'^{1-9,10}'&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# preselect&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# preselect the direction&lt;/span&gt;
+super + ctrl + alt + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;Left,Down,Up,Right&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc node &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;west,south,north,east&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# preselect the ratio&lt;/span&gt;
+super + ctrl + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1-9&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc node &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; 0.&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1-9&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# cancel the preselection for the focused node&lt;/span&gt;
+super + ctrl + space
+	bspc node &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; cancel
+
+&lt;span class=&quot;c&quot;&gt;# cancel the preselection for the focused desktop&lt;/span&gt;
+super + ctrl + alt + space
+	bspc query &lt;span class=&quot;nt&quot;&gt;-N&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; | xargs &lt;span class=&quot;nt&quot;&gt;-I&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 bspc node &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; cancel
+
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# move/resize&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# expand a window by moving one of its side outward&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#super + alt + {h,j,k,l}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# contract a window by moving one of its side inward&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#super + alt + shift + {h,j,k,l}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# move a floating window&lt;/span&gt;
+super + ctrl + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;Left,Down,Up,Right&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	bspc node &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-20&lt;/span&gt; 0,0 20,0 &lt;span class=&quot;nt&quot;&gt;-20&lt;/span&gt;,20 0&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Custom move/resize&lt;/span&gt;
+alt + super + &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;Left,Down,Up,Right&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	/home/s4vitar/.config/bspwm/scripts/bspwm_resize &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;west,south,north,east&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# ---------------------------------------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# CUSTOM&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ---------------------------------------------&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Google-Chrome&lt;/span&gt;
+
+super + &lt;span class=&quot;nb&quot;&gt;shift&lt;/span&gt; + g
+	google-chrome
+
+&lt;span class=&quot;c&quot;&gt;# Open Burpsuite Professional&lt;/span&gt;
+
+super + ctrl + b
+	gksudo burp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;archivo-zshrc&quot;&gt;Archivo zshrc&lt;/h2&gt;
+
+&lt;p&gt;Este sería el archivo de configuración situado bajo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Fix the Java Problem&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;_JAVA_AWT_WM_NONREPARENTING&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+
+&lt;span class=&quot;c&quot;&gt;# Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;XDG_CACHE_HOME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/.cache&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/p10k-instant-prompt-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(%)&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%n&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.zsh&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;XDG_CACHE_HOME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/.cache&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/p10k-instant-prompt-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(%)&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%n&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.zsh&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Set up the prompt&lt;/span&gt;
+
+autoload &lt;span class=&quot;nt&quot;&gt;-Uz&lt;/span&gt; promptinit
+promptinit
+prompt adam1
+
+setopt histignorealldups sharehistory
+
+&lt;span class=&quot;c&quot;&gt;# Use emacs keybindings even if our EDITOR is set to vi&lt;/span&gt;
+bindkey &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HISTSIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1000
+&lt;span class=&quot;nv&quot;&gt;SAVEHIST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1000
+&lt;span class=&quot;nv&quot;&gt;HISTFILE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.zsh_history
+
+&lt;span class=&quot;c&quot;&gt;# Use modern completion system&lt;/span&gt;
+autoload &lt;span class=&quot;nt&quot;&gt;-Uz&lt;/span&gt; compinit
+compinit
+
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; auto-description &lt;span class=&quot;s1&quot;&gt;'specify: %d'&lt;/span&gt;
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; completer _expand _complete _correct _approximate
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; format &lt;span class=&quot;s1&quot;&gt;'Completing %d'&lt;/span&gt;
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; group-name &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; menu &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2
+&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dircolors&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*:default'&lt;/span&gt; list-colors &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(s.&lt;/span&gt;:.&lt;span class=&quot;p&quot;&gt;)LS_COLORS&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; list-colors &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; list-prompt %SAt %p: Hit TAB &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;more, or the character to insert%s
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; matcher-list &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'m:{a-z}={A-Z}'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'m:{a-zA-Z}={A-Za-z}'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'r:|[._-]=* r:|=* l:|=*'&lt;/span&gt;
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; menu &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;long
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-prompt&lt;/span&gt; %SScrolling active: current selection at %p%s
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; use-compctl &lt;span class=&quot;nb&quot;&gt;false
+&lt;/span&gt;zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*'&lt;/span&gt; verbose &lt;span class=&quot;nb&quot;&gt;true
+
+&lt;/span&gt;zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*:*:kill:*:processes'&lt;/span&gt; list-colors &lt;span class=&quot;s1&quot;&gt;'=(#b) #([0-9]#)*=0=01;31'&lt;/span&gt;
+zstyle &lt;span class=&quot;s1&quot;&gt;':completion:*:kill:*'&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ps -u $USER -o pid,%cpu,tty,cputime,cmd'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /home/s4vitar/powerlevel10k/powerlevel10k.zsh-theme
+
+&lt;span class=&quot;c&quot;&gt;# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; ~/.p10k.zsh &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.p10k.zsh
+
+&lt;span class=&quot;c&quot;&gt;# Manual configuration&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+&lt;span class=&quot;c&quot;&gt;# Manual aliases&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'lsd -lh --group-dirs=first'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;la&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'lsd -a --group-dirs=first'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'lsd --group-dirs=first'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;lla&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'lsd -lha --group-dirs=first'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias ls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'lsd --group-dirs=first'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias cat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'bat'&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; ~/.fzf.zsh &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.fzf.zsh
+
+&lt;span class=&quot;c&quot;&gt;# Plugins&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /usr/share/zsh-sudo/sudo.plugin.zsh
+
+&lt;span class=&quot;c&quot;&gt;# Functions&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;mkt&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;nmap,content,exploits,scripts&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Extract nmap information&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;extractPorts&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;nv&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-oP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'\d{1,5}/open'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $1}'&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;FS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/'&lt;/span&gt; | xargs | &lt;span class=&quot;nb&quot;&gt;tr&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+	&lt;span class=&quot;nv&quot;&gt;ip_address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-oP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[*] Extracting information...&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; extractPorts.tmp
+	&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[*] IP Address: &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ip_address&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; extractPorts.tmp
+	&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[*] Open ports: &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ports&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; extractPorts.tmp
+	&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ports&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tr&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'\n'&lt;/span&gt; | xclip &lt;span class=&quot;nt&quot;&gt;-sel&lt;/span&gt; clip
+	&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;[*] Ports copied to clipboard&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; extractPorts.tmp
+	&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;extractPorts.tmp&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;extractPorts.tmp
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Set 'man' colors&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;man&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;env&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_mb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\e&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[01;31m'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_md&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\e&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[01;31m'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_me&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\e&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[0m'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_se&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\e&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[0m'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_so&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\e&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[01;44;33m'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\e&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[0m'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_us&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\e&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[01;32m'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    man &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# fzf improvement&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;fzf-lovely&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;h&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+		&lt;/span&gt;fzf &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--reverse&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--preview-window&lt;/span&gt; down:20 &lt;span class=&quot;nt&quot;&gt;--preview&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'[[ $(file --mime {}) =~ binary ]] &amp;amp;&amp;amp;
+ 	                echo {} is a binary file ||
+	                 (bat --style=numbers --color=always {} ||
+	                  highlight -O ansi -l {} ||
+	                  coderay {} ||
+	                  rougify {} ||
+	                  cat {}) 2&amp;gt; /dev/null | head -500'&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;else
+	        &lt;/span&gt;fzf &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--preview&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'[[ $(file --mime {}) =~ binary ]] &amp;amp;&amp;amp;
+	                         echo {} is a binary file ||
+	                         (bat --style=numbers --color=always {} ||
+	                          highlight -O ansi -l {} ||
+	                          coderay {} ||
+	                          rougify {} ||
+	                          cat {}) 2&amp;gt; /dev/null | head -500'&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;rmk&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+	scrub &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; dod &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;shred&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-zun&lt;/span&gt; 10 &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;+functions[p10k-instant-prompt-finalize]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; p10k-instant-prompt-finalize
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;archivo-launchsh&quot;&gt;Archivo launch.sh&lt;/h2&gt;
+
+&lt;p&gt;Este sería el archivo de configuración situado bajo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/polybar&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Terminate already running bar instances&lt;/span&gt;
+killall &lt;span class=&quot;nt&quot;&gt;-q&lt;/span&gt; polybar
+
+&lt;span class=&quot;c&quot;&gt;# Wait until the processes have been shut down&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;pgrep &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$UID&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; polybar &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/dev/null&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sleep &lt;/span&gt;1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Launch bar1 and bar2&lt;/span&gt;
+polybar example &amp;amp;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Polybar launched...&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;El archivo de configuración del &lt;strong&gt;Polybar&lt;/strong&gt; no es necesario que lo comparta por aquí porque básicamente son 2 líneas las que hay que cambiar y no debería de dar fallos.&lt;/p&gt;
+
+&lt;p&gt;¡Espero que de esta forma tengáis menos problemas!&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="bspwm" /><category term="sxhkd" /><category term="compton" /><category term="polybar" /><category term="powerlevel10k" /><summary type="html">En este artículo comparto algunos de los archivos que creamos en el vídeo 'Cómo configurar un buen entorno de trabajo en Linux' de mi canal de YouTube.</summary></entry><entry><title type="html">Exposición de datos médicos en hospitales</title><link href="http://localhost:4000/hospital-dicom-exposure/" rel="alternate" type="text/html" title="Exposición de datos médicos en hospitales" /><published>2020-01-29T00:00:00+00:00</published><updated>2020-01-29T00:00:00+00:00</updated><id>http://localhost:4000/hospital-dicom-exposure</id><content type="html" xml:base="http://localhost:4000/hospital-dicom-exposure/">&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Durante los últimos meses, hemos visto noticias por todos lados de datos médicos de pacientes los cuales han quedado expuestos por internet. Es algo alarmante pero no sorprendente teniendo en cuenta cómo está la seguridad a día de hoy.&lt;/p&gt;
 
