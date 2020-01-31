@@ -8,11 +8,11 @@ header:
   teaser: /assets/images/hospital-dicom/dicom.png
   teaser_home_page: true
 categories:
-  - research
+  - Research
 tags:
-  - hospitales
-  - dicom
-  - radiant
+  - Hospitales
+  - Dicom
+  - Radiant
 ---
 
 ![](/assets/images/hospital-dicom/dicom.png)

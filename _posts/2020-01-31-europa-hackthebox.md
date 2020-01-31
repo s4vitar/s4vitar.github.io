@@ -9,13 +9,13 @@ header:
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
-  - hackthebox
-  - autopwn
+  - HackTheBox
+  - Autopwn
 tags:
-  - sqli
-  - web exploiting
-  - privilege escalation
-  - python
+  - Sqli
+  - Web Exploiting
+  - Privilege Escalation
+  - Python
 ---
 
 <p align="center">

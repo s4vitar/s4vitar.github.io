@@ -8,11 +8,11 @@ header:
   teaser: /assets/images/chatroulette-bypass/chatroulette-main.jpg
   teaser_home_page: true
 categories:
-  - research
+  - Research
 tags:
-  - chatroulette
-  - burpsuite
-  - bypassing
+  - Chatroulette
+  - Burpsuite
+  - Bypassing
 ---
 
 ![](/assets/images/chatroulette-bypass/chatroulette-main.jpg)

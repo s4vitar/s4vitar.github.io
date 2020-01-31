@@ -12,11 +12,11 @@ categories:
   - Utilidades
   - Configuración
 tags:
-  - bspwm
-  - sxhkd
-  - compton
-  - polybar
-  - powerlevel10k
+  - Bspwm
+  - Xxhkd
+  - Compton
+  - Polybar
+  - Powerlevel10k
 ---
 
 ![](/assets/images/bspwm/bspwm-background.jpg)
