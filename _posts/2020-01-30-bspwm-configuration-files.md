@@ -13,7 +13,7 @@ categories:
   - Configuración
 tags:
   - Bspwm
-  - Xxhkd
+  - Sxhkd
   - Compton
   - Polybar
   - Powerlevel10k

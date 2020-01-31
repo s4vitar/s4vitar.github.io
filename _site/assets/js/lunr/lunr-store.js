@@ -6,7 +6,7 @@ var store = [{
         "teaser":"http://localhost:4000/assets/images/hospital-dicom/dicom.png"},{
         "title": "Archivos de configuración de Bspwm",
         "excerpt":"Para el que no sepa de lo que estamos hablando, toda la configuración que se define en este artículo es la detallada en el siguiente vídeo mi canal de YouTube: Cómo configurar un buen entorno de trabajo en Linux Algunos de vosotros me habéis contactado pidiéndome que subiera los archivos...","categories": ["YouTube","Utilidades","Configuración"],
-        "tags": ["Bspwm","Xxhkd","Compton","Polybar","Powerlevel10k"],
+        "tags": ["Bspwm","Sxhkd","Compton","Polybar","Powerlevel10k"],
         "url": "http://localhost:4000/bspwm-configuration-files/",
         "teaser":"http://localhost:4000/assets/images/bspwm/bspwm-background.jpg"},{
         "title": "Bypassing de validación en Chatroulette",
