@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-30T11:04:13+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">Archivos de configuración de Bspwm</title><link href="http://localhost:4000/bspwm-configuration-files/" rel="alternate" type="text/html" title="Archivos de configuración de Bspwm" /><published>2020-01-30T00:00:00+00:00</published><updated>2020-01-30T00:00:00+00:00</updated><id>http://localhost:4000/bspwm-configuration-files</id><content type="html" xml:base="http://localhost:4000/bspwm-configuration-files/">&lt;p&gt;&lt;img src=&quot;/assets/images/bspwm/bspwm-background.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-31T00:15:32+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">Archivos de configuración de Bspwm</title><link href="http://localhost:4000/bspwm-configuration-files/" rel="alternate" type="text/html" title="Archivos de configuración de Bspwm" /><published>2020-01-30T00:00:00+00:00</published><updated>2020-01-30T00:00:00+00:00</updated><id>http://localhost:4000/bspwm-configuration-files</id><content type="html" xml:base="http://localhost:4000/bspwm-configuration-files/">&lt;p&gt;&lt;img src=&quot;/assets/images/bspwm/bspwm-background.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para el que no sepa de lo que estamos hablando, toda la configuración que se define en este artículo es la detallada en el siguiente vídeo mi canal de YouTube:&lt;/p&gt;
 
@@ -404,7 +404,82 @@ polybar example &amp;amp;
 
 &lt;p&gt;El archivo de configuración del &lt;strong&gt;Polybar&lt;/strong&gt; no es necesario que lo comparta por aquí porque básicamente son 2 líneas las que hay que cambiar y no debería de dar fallos.&lt;/p&gt;
 
-&lt;p&gt;¡Espero que de esta forma tengáis menos problemas!&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="bspwm" /><category term="sxhkd" /><category term="compton" /><category term="polybar" /><category term="powerlevel10k" /><summary type="html">En este artículo comparto algunos de los archivos que creamos en el vídeo 'Cómo configurar un buen entorno de trabajo en Linux' de mi canal de YouTube.</summary></entry><entry><title type="html">Exposición de datos médicos en hospitales</title><link href="http://localhost:4000/hospital-dicom-exposure/" rel="alternate" type="text/html" title="Exposición de datos médicos en hospitales" /><published>2020-01-29T00:00:00+00:00</published><updated>2020-01-29T00:00:00+00:00</updated><id>http://localhost:4000/hospital-dicom-exposure</id><content type="html" xml:base="http://localhost:4000/hospital-dicom-exposure/">&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;¡Espero que de esta forma tengáis menos problemas!&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="bspwm" /><category term="sxhkd" /><category term="compton" /><category term="polybar" /><category term="powerlevel10k" /><summary type="html">En este artículo comparto algunos de los archivos que creamos en el vídeo 'Cómo configurar un buen entorno de trabajo en Linux' de mi canal de YouTube.</summary></entry><entry><title type="html">Bypassing de validación en Chatroulette</title><link href="http://localhost:4000/chatroulette-bypass/" rel="alternate" type="text/html" title="Bypassing de validación en Chatroulette" /><published>2020-01-30T00:00:00+00:00</published><updated>2020-01-30T00:00:00+00:00</updated><id>http://localhost:4000/chatroulette-bypass</id><content type="html" xml:base="http://localhost:4000/chatroulette-bypass/">&lt;p&gt;&lt;img src=&quot;/assets/images/chatroulette-bypass/chatroulette-main.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hoy os vengo a mostrar un bypassing de lo más absurdo en la plataforma de Chatroulette. Supongo que sabréis que a la hora de entrar en Chatroulette se lleva a cabo una especie de validación, donde te piden que sonrías para que tu cara quede registrada en el sistema y posteriormente puedas acceder. Pues atentos a la jugada.&lt;/p&gt;
+
+&lt;h1 id=&quot;antecedentes&quot;&gt;Antecedentes&lt;/h1&gt;
+
+&lt;p&gt;Resulta que estaba yo tan tranquilo dispuesto a buscar a &lt;strong&gt;Julio Ureña&lt;/strong&gt; en la plataforma de Chatroulette, cuando vi que para empezar a conectar con gente se me solicitaba la siguiente información:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/chatroulette-bypass/smile.jpg&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Al parecer debes de sonreir frente a la cámara para ya comenzar a usar el servicio. Esta fase me interesó mucho, ¿de qué forma se hace la validación?… es lo que mi mente inquieta se preguntaba.&lt;/p&gt;
+
+&lt;p&gt;Dado que &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Burpsuite&lt;/code&gt; siempre responde a estas preguntas, probé a tirar de nuestro querido proxy para ver cómo viajaban las consultas. Desde que presionas &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Start&lt;/code&gt;, empiezan a viajar una serie de WebSockets con valores que identifican entre otras cosas nuestro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UserToken&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/chatroulette-bypass/burp-first.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Justo en el momento en el que se comienza a buscar una sonrisa del lado de nuestra cámara, se inicia un proceso de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ClientPing&lt;/code&gt;, bajo el cual se saca un Snapshot para posteriormente del lado del servidor interpretar la imagen :&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/chatroulette-bypass/clientping.png&quot; /&gt;&amp;gt;
+&lt;/p&gt;
+
+&lt;h2 id=&quot;checking-absurdo&quot;&gt;Checking absurdo&lt;/h2&gt;
+
+&lt;p&gt;La gran fase de validación viene ahora. Si presionamos varias veces en &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Forward&lt;/code&gt;, de pronto podremos notar algo que llama mucho la atención:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/chatroulette-bypass/base64.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;La misma pregunta que te estás haciendo es la que me hice yo en su momento, ¿qué demonios es esto?.&lt;/p&gt;
+
+&lt;p&gt;Bueno pues este churraco… es un base64 más grande que mi casa, y lo que más llama la atención es el tipo de archivo que representa una vez se decodifica desde consola:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌─[s4vitar@parrot]─[~/Desktop]
+└──╼ &lt;span class=&quot;nv&quot;&gt;$cat&lt;/span&gt; file | &lt;span class=&quot;nb&quot;&gt;base64&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; content
+┌─[s4vitar@parrot]─[~/Desktop]
+└──╼ &lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt; content 
+content: PNG image data, 640 x 480, 8-bit/color RGBA, non-interlaced
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Efectivamente, una imagen, ¿y a qué corresponde esta imagen?, a la instantánea que se realiza:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/chatroulette-bypass/instantanea-base64.png&quot; /&gt;&amp;gt;
+&lt;/p&gt;
+
+&lt;h2 id=&quot;bypassing-de-la-sonrisa&quot;&gt;Bypassing de la sonrisa&lt;/h2&gt;
+
+&lt;p&gt;¿Cómo hacemos por tanto para bypassear este sistema de validación y no tener que sonreir de nuestro lado para conectar con Julio?, pues bueno… simplemente tendríamos que coger una foto cualquiera de internet en la que salga alguien sonriendo:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/chatroulette-bypass/smile-girl.jpeg&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;La pasamos a base64 desde consola:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌─[s4vitar@parrot]─[~/Desktop]
+└──╼ &lt;span class=&quot;nv&quot;&gt;$cat&lt;/span&gt; smile-girl.jpeg | &lt;span class=&quot;nb&quot;&gt;base64&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; 0 | xclip &lt;span class=&quot;nt&quot;&gt;-sel&lt;/span&gt; clip
+┌─[s4vitar@parrot]─[~/Desktop]
+└──╼ &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Y sustituimos el nuevo valor en base64 por el que previamente Burpsuite nos ha interceptado.&lt;/p&gt;
+
+&lt;p&gt;Tras hacerlo, la validación se habrá aplicado y ya podremos empezar a conectar con los demás sin haber sido necesario de nuestro lado sonreir y mostrar el rostro:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/chatroulette-bypass/man.jpg&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Posteriormente, estuvimos debatiendo este señor y yo la máquina BigHead de HackTheBox, donde me comentaba una vía no intencionada de explotación para acceder al sistema, un grande este señor.&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="chatroulette" /><category term="burpsuite" /><category term="bypassing" /><summary type="html">Hoy os vengo a mostrar un bypassing de lo más absurdo en la plataforma de Chatroulette. Supongo que sabréis que a la hora de entrar en Chatroulette se lleva a cabo una especie de validación, donde te piden que sonrías para que tu cara quede registrada en el sistema y posteriormente puedas acceder. Pues atentos a la jugada.</summary></entry><entry><title type="html">Exposición de datos médicos en hospitales</title><link href="http://localhost:4000/hospital-dicom-exposure/" rel="alternate" type="text/html" title="Exposición de datos médicos en hospitales" /><published>2020-01-29T00:00:00+00:00</published><updated>2020-01-29T00:00:00+00:00</updated><id>http://localhost:4000/hospital-dicom-exposure</id><content type="html" xml:base="http://localhost:4000/hospital-dicom-exposure/">&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Durante los últimos meses, hemos visto noticias por todos lados de datos médicos de pacientes los cuales han quedado expuestos por internet. Es algo alarmante pero no sorprendente teniendo en cuenta cómo está la seguridad a día de hoy.&lt;/p&gt;
 

@@ -8,4 +8,9 @@ var store = [{
         "excerpt":"Para el que no sepa de lo que estamos hablando, toda la configuración que se define en este artículo es la detallada en el siguiente vídeo mi canal de YouTube: Cómo configurar un buen entorno de trabajo en Linux Algunos de vosotros me habéis contactado pidiéndome que subiera los archivos...","categories": ["YouTube","Utilidades","Configuración"],
         "tags": ["bspwm","sxhkd","compton","polybar","powerlevel10k"],
         "url": "http://localhost:4000/bspwm-configuration-files/",
-        "teaser":"http://localhost:4000/assets/images/bspwm/bspwm-background.jpg"}]
+        "teaser":"http://localhost:4000/assets/images/bspwm/bspwm-background.jpg"},{
+        "title": "Bypassing de validación en Chatroulette",
+        "excerpt":"Hoy os vengo a mostrar un bypassing de lo más absurdo en la plataforma de Chatroulette. Supongo que sabréis que a la hora de entrar en Chatroulette se lleva a cabo una especie de validación, donde te piden que sonrías para que tu cara quede registrada en el sistema y...","categories": ["research"],
+        "tags": ["chatroulette","burpsuite","bypassing"],
+        "url": "http://localhost:4000/chatroulette-bypass/",
+        "teaser":"http://localhost:4000/assets/images/chatroulette-bypass/chatroulette-main.jpg"}]
