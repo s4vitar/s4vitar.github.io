@@ -18,4 +18,9 @@ var store = [{
         "excerpt":"Una máquina muy interesante la cual resolvemos en mi canal de YouTube. En este caso, os comparto el script Autopwn que nos habíamos configurado en Python, donde tras su ejecución se nos automatiza la intrusión y la escalada de privilegios mediante el uso de la librería pwn. Para los interesados...","categories": ["HackTheBox","Autopwn"],
         "tags": ["Sqli","Web Exploiting","Privilege Escalation","Python"],
         "url": "http://localhost:4000/europa-hackthebox/",
-        "teaser":"http://localhost:4000/assets/images/htb-writeup-europa/europa_logo.png"}]
+        "teaser":"http://localhost:4000/assets/images/htb-writeup-europa/europa_logo.png"},{
+        "title": "FastTcpScan - Go",
+        "excerpt":"En el siguiente artículo os comparto la herramienta FastTcpScan que nos desarrollamos en la máquina Hawk de la plataforma HackTheBox. Esta herramienta consiste en un escáner que permite detectar de forma rápida y precisa los puertos TCP que una máquina tiene abiertos. Para aquellos que quieran ver el desarrollo de...","categories": ["Scripting"],
+        "tags": ["TCP Scan","Go Golang"],
+        "url": "http://localhost:4000/fasttcpscan-go/",
+        "teaser":"http://localhost:4000/assets/images/fasttcpscan-go/golang-go.png"}]
