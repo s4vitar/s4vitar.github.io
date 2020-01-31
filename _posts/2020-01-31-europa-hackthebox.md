@@ -11,6 +11,7 @@ header:
 categories:
   - HackTheBox
   - Autopwn
+  - Scripting
 tags:
   - Sqli
   - Web Exploiting
