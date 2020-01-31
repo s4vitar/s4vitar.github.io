@@ -13,4 +13,9 @@ var store = [{
         "excerpt":"Hoy os vengo a mostrar un bypassing de lo más absurdo en la plataforma de Chatroulette. Supongo que sabréis que a la hora de entrar en Chatroulette se lleva a cabo una especie de validación, donde te piden que sonrías para que tu cara quede registrada en el sistema y...","categories": ["research"],
         "tags": ["chatroulette","burpsuite","bypassing"],
         "url": "http://localhost:4000/chatroulette-bypass/",
-        "teaser":"http://localhost:4000/assets/images/chatroulette-bypass/chatroulette-main.jpg"}]
+        "teaser":"http://localhost:4000/assets/images/chatroulette-bypass/chatroulette-main.jpg"},{
+        "title": "Europa - Hack The Box",
+        "excerpt":"Una máquina muy interesante la cual resolvemos en mi canal de YouTube. En este caso, os comparto el script Autopwn que nos habíamos configurado en Python, donde tras su ejecución se nos automatiza la intrusión y la escalada de privilegios mediante el uso de la librería pwn. Para los interesados...","categories": ["hackthebox","autopwn"],
+        "tags": ["sqli","web exploiting","privilege escalation","python"],
+        "url": "http://localhost:4000/europa-hackthebox/",
+        "teaser":"http://localhost:4000/assets/images/htb-writeup-europa/europa_logo.png"}]
