@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-02T23:28:42+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">evilTrust - Herramienta</title><link href="http://localhost:4000/evil-trust/" rel="alternate" type="text/html" title="evilTrust - Herramienta" /><published>2020-02-02T00:00:00+00:00</published><updated>2020-02-02T00:00:00+00:00</updated><id>http://localhost:4000/evil-trust</id><content type="html" xml:base="http://localhost:4000/evil-trust/">&lt;p align=&quot;center&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-02T23:34:35+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">h-c0n 2020 - evilTrust (Herramienta Ofensiva)</title><link href="http://localhost:4000/evil-trust/" rel="alternate" type="text/html" title="h-c0n 2020 - evilTrust (Herramienta Ofensiva)" /><published>2020-02-02T00:00:00+00:00</published><updated>2020-02-02T00:00:00+00:00</updated><id>http://localhost:4000/evil-trust</id><content type="html" xml:base="http://localhost:4000/evil-trust/">&lt;p align=&quot;center&quot;&gt;
 &lt;img src=&quot;/assets/images/evil-trust/evil.png&quot; width=&quot;200&quot; /&gt;
 &lt;/p&gt;
 
@@ -14,8 +14,8 @@
     &lt;img src=&quot;/assets/images/evil-trust/Photo6.png&quot; alt=&quot;Mountains&quot; style=&quot;width:34%&quot; /&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;p&gt;Para los interesados, deciros que tenéis la charla disponible en el siguiente enlace:&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+Para los interesados, deciros que tenéis la charla disponible en el siguiente enlace:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-GIA9et7ZRg&quot;&gt;h-c0n 2020 | evilTrust - Herramienta Ofensiva&lt;/a&gt;&lt;/li&gt;
@@ -342,7 +342,7 @@
 
 &lt;p align=&quot;center&quot;&gt;
 &lt;img src=&quot;/assets/images/evil-trust/step_ten.png&quot; /&gt;
-&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="GitHub" /><category term="Bash" /><category term="Herramientas" /><summary type="html">Recientemente estuve en la h-c0n presentando la herramienta evilTrust. En este artículo, comento la utilidad de la herramienta para todos aquellos que la quieran probar.</summary></entry><entry><title type="html">Europa - Hack The Box</title><link href="http://localhost:4000/europa-hackthebox/" rel="alternate" type="text/html" title="Europa - Hack The Box" /><published>2020-01-31T00:00:00+00:00</published><updated>2020-01-31T00:00:00+00:00</updated><id>http://localhost:4000/europa-hackthebox</id><content type="html" xml:base="http://localhost:4000/europa-hackthebox/">&lt;p align=&quot;center&quot;&gt;
+&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="GitHub" /><category term="Bash" /><category term="Herramientas" /><summary type="html">Recientemente estuve en la h-c0n presentando la herramienta evilTrust. En este artículo, comento la utilidad de la herramienta para todos aquellos que la quieran probar. Gracias a los organizadores del evento por invitarme y a todos los presentes por la gran acogida.</summary></entry><entry><title type="html">Europa - Hack The Box</title><link href="http://localhost:4000/europa-hackthebox/" rel="alternate" type="text/html" title="Europa - Hack The Box" /><published>2020-01-31T00:00:00+00:00</published><updated>2020-01-31T00:00:00+00:00</updated><id>http://localhost:4000/europa-hackthebox</id><content type="html" xml:base="http://localhost:4000/europa-hackthebox/">&lt;p align=&quot;center&quot;&gt;
 &lt;img src=&quot;/assets/images/htb-writeup-europa/europa_logo.png&quot; /&gt;
 &lt;/p&gt;
 

@@ -24,7 +24,7 @@ var store = [{
         "tags": ["TCP Scan","Go Golang"],
         "url": "http://localhost:4000/fasttcpscan-go/",
         "teaser":"http://localhost:4000/assets/images/fasttcpscan-go/golang-go.png"},{
-        "title": "evilTrust - Herramienta",
+        "title": "h-c0n 2020 - evilTrust (Herramienta Ofensiva)",
         "excerpt":"Recientemente estuve en la h-c0n presentando la herramienta evilTrust. Antes que nada quiero agradecer a los organizadores del evento por invitarme y a todos los presentes por la gran acogida, lo pasamos entre todos bastante bien. Para los interesados, deciros que tenéis la charla disponible en el siguiente enlace: h-c0n...","categories": ["Scripting"],
         "tags": ["GitHub","Bash","Herramientas"],
         "url": "http://localhost:4000/evil-trust/",

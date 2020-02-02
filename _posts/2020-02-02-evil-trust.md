@@ -1,7 +1,7 @@
 ---
 layout: single
-title: evilTrust - Herramienta
-excerpt: "Recientemente estuve en la h-c0n presentando la herramienta evilTrust. En este artículo, comento la utilidad de la herramienta para todos aquellos que la quieran probar."
+title: h-c0n 2020 - evilTrust (Herramienta Ofensiva)
+excerpt: "Recientemente estuve en la h-c0n presentando la herramienta evilTrust. En este artículo, comento la utilidad de la herramienta para todos aquellos que la quieran probar. Gracias a los organizadores del evento por invitarme y a todos los presentes por la gran acogida."
 date: 2020-02-02
 classes: wide
 header:
@@ -31,7 +31,7 @@ Recientemente estuve en la **h-c0n** presentando la herramienta [evilTrust](http
     <img src="/assets/images/evil-trust/Photo6.png" alt="Mountains" style="width:34%">
   </div>
 </div>
-
+<br>
 Para los interesados, deciros que tenéis la charla disponible en el siguiente enlace:
 
 - [h-c0n 2020 \| evilTrust - Herramienta Ofensiva](https://www.youtube.com/watch?v=-GIA9et7ZRg)
