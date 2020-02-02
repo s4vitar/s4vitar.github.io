@@ -272,7 +272,7 @@ La víctima en ningún momento verá direcciones IP ni nada por el estilo, por l
 
 Cada plantilla está organizada en su propio directorio, donde tras seleccionar aquella con la que queramos trabajar, se efectúa un `pushd` hacia ese directorio para posteriormente montar un servidor web mediante `php` hosteado por el puerto 80.
 
-Ya en es punto, se llama a la función `getCredentials`, que es la que se encargará de monitorizar un fichero desde el cual podremos saber en todo momento quién ha introducido sus credenciales, pudiéndolas ver posteriormente en texto claro:
+Ya en este punto, se llama a la función `getCredentials`, que es la que se encargará de monitorizar un fichero desde el cual podremos saber en todo momento quién ha introducido sus credenciales, pudiéndolas ver posteriormente en texto claro:
 
 ```go
 function getCredentials(){
