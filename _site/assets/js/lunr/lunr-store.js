@@ -23,4 +23,9 @@ var store = [{
         "excerpt":"En el siguiente artículo os comparto la herramienta FastTcpScan que nos desarrollamos en la máquina Hawk de la plataforma HackTheBox. Esta herramienta consiste en un escáner que permite detectar de forma rápida y precisa los puertos TCP que una máquina tiene abiertos. Para aquellos que quieran ver el desarrollo de...","categories": ["Scripting"],
         "tags": ["TCP Scan","Go Golang"],
         "url": "http://localhost:4000/fasttcpscan-go/",
-        "teaser":"http://localhost:4000/assets/images/fasttcpscan-go/golang-go.png"}]
+        "teaser":"http://localhost:4000/assets/images/fasttcpscan-go/golang-go.png"},{
+        "title": "evilTrust - Herramienta",
+        "excerpt":"Recientemente estuve en la h-c0n presentando la herramienta evilTrust. Antes que nada quiero agradecer a los organizadores del evento por invitarme y a todos los presentes por la gran acogida, lo pasamos entre todos bastante bien. Para los interesados, deciros que tenéis la charla disponible en el siguiente enlace: h-c0n...","categories": ["Scripting"],
+        "tags": ["GitHub","Bash","Herramientas"],
+        "url": "http://localhost:4000/evil-trust/",
+        "teaser":"http://localhost:4000/assets/images/evil-trust/evil.png"}]
