@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-02T23:34:35+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">h-c0n 2020 - evilTrust (Herramienta Ofensiva)</title><link href="http://localhost:4000/evil-trust/" rel="alternate" type="text/html" title="h-c0n 2020 - evilTrust (Herramienta Ofensiva)" /><published>2020-02-02T00:00:00+00:00</published><updated>2020-02-02T00:00:00+00:00</updated><id>http://localhost:4000/evil-trust</id><content type="html" xml:base="http://localhost:4000/evil-trust/">&lt;p align=&quot;center&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-02T23:43:03+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">h-c0n 2020 - evilTrust (Herramienta Ofensiva)</title><link href="http://localhost:4000/evil-trust/" rel="alternate" type="text/html" title="h-c0n 2020 - evilTrust (Herramienta Ofensiva)" /><published>2020-02-02T00:00:00+00:00</published><updated>2020-02-02T00:00:00+00:00</updated><id>http://localhost:4000/evil-trust</id><content type="html" xml:base="http://localhost:4000/evil-trust/">&lt;p align=&quot;center&quot;&gt;
 &lt;img src=&quot;/assets/images/evil-trust/evil.png&quot; width=&quot;200&quot; /&gt;
 &lt;/p&gt;
 
@@ -255,7 +255,7 @@ Para los interesados, deciros que tenéis la charla disponible en el siguiente e
 
 &lt;p&gt;Cada plantilla está organizada en su propio directorio, donde tras seleccionar aquella con la que queramos trabajar, se efectúa un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pushd&lt;/code&gt; hacia ese directorio para posteriormente montar un servidor web mediante &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;php&lt;/code&gt; hosteado por el puerto 80.&lt;/p&gt;
 
-&lt;p&gt;Ya en es punto, se llama a la función &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getCredentials&lt;/code&gt;, que es la que se encargará de monitorizar un fichero desde el cual podremos saber en todo momento quién ha introducido sus credenciales, pudiéndolas ver posteriormente en texto claro:&lt;/p&gt;
+&lt;p&gt;Ya en este punto, se llama a la función &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getCredentials&lt;/code&gt;, que es la que se encargará de monitorizar un fichero desde el cual podremos saber en todo momento quién ha introducido sus credenciales, pudiéndolas ver posteriormente en texto claro:&lt;/p&gt;
 
 &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getCredentials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
 
@@ -284,7 +284,7 @@ Para los interesados, deciros que tenéis la charla disponible en el siguiente e
 
 &lt;p&gt;En resumen, si la víctima tiene 2FA, podrás obtener el código, y si no lo tiene configurado… en el peor de los casos ya tienes sus credenciales, la víctima se quedará en la nueva plantilla esperando a que le llegue el código cuando nunca le va a llegar y tú mientras por detrás estarás accediendo a su cuenta.&lt;/p&gt;
 
-&lt;p&gt;Como pequeña anotación, durante el evento, algunos compañeros hicieron uso de la herramienta y me comentaron que algunos introducieron incluso hasta sus credenciales de empresa.&lt;/p&gt;
+&lt;p&gt;Como pequeña anotación, durante el evento, algunos compañeros hicieron uso de la herramienta y me comentaron que algunos introdujeron incluso hasta sus credenciales de empresa.&lt;/p&gt;
 
 &lt;h2 id=&quot;demo-de-la-herramienta&quot;&gt;Demo de la herramienta&lt;/h2&gt;
 

@@ -303,7 +303,7 @@ La gran pregunta que algunos me hicisteis... ¿pero y si la víctima no tiene el
 
 En resumen, si la víctima tiene 2FA, podrás obtener el código, y si no lo tiene configurado... en el peor de los casos ya tienes sus credenciales, la víctima se quedará en la nueva plantilla esperando a que le llegue el código cuando nunca le va a llegar y tú mientras por detrás estarás accediendo a su cuenta.
 
-Como pequeña anotación, durante el evento, algunos compañeros hicieron uso de la herramienta y me comentaron que algunos introducieron incluso hasta sus credenciales de empresa.
+Como pequeña anotación, durante el evento, algunos compañeros hicieron uso de la herramienta y me comentaron que algunos introdujeron incluso hasta sus credenciales de empresa.
 
 ## Demo de la herramienta
 
