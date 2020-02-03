@@ -80,6 +80,7 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 - Webinar interactivo (HackTheBox Latino) - Resolvendo máquina personal presentada en el evento Q4, la cual no pudo ser resuelta por ninguno de los participantes: [Ver webinar](https://www.youtube.com/watch?v=5AmJtyBphVE)
 - Cómo ser un pentester a nivel profesional - Charla [Ver charla](https://www.facebook.com/hackingEtico18/videos/vb.1592676964151994/185438342573111)
 - Seguridad y Hacking por ipv6 - Charla [Ver charla](https://www.youtube.com/watch?v=A445hnKq9wk)
+- evilTrust (Herramienta Ofensiva) - Charla h-c0n 2020: [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
 - Canal de ciberseguridad en YouTube con más de 1.000 suscriptores: [Ver canal](https://youtube.com/s4vitar)
 
 ## Asistencias
