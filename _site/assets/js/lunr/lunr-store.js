@@ -28,4 +28,9 @@ var store = [{
         "excerpt":"Recientemente estuve en la h-c0n presentando la herramienta evilTrust. Antes que nada quiero agradecer a los organizadores del evento por invitarme y a todos los presentes por la gran acogida, lo pasamos entre todos bastante bien. Para los interesados, deciros que tenéis la charla disponible en el siguiente enlace: h-c0n...","categories": ["Scripting"],
         "tags": ["GitHub","Bash","Herramientas"],
         "url": "http://localhost:4000/evil-trust/",
-        "teaser":"http://localhost:4000/assets/images/evil-trust/evil.png"}]
+        "teaser":"http://localhost:4000/assets/images/evil-trust/evil.png"},{
+        "title": "Canal encubierto en WhatsApp",
+        "excerpt":"En el siguiente artículo, os muestro una forma de mantener conversaciones encubiertas sin que quede registro en el historial de conversaciones de WhatsApp. De esta forma, dos personas pueden mantener una conversación mediante la lectura de logs a tiempo de escritura sin necesidad de enviar el mensaje. Antecedentes Para poder...","categories": ["Research"],
+        "tags": ["WhatsApp","Canales Encubiertos"],
+        "url": "http://localhost:4000/canal-encubierto-whatsapp/",
+        "teaser":"http://localhost:4000/assets/images/whatsapp-canal-encubierto/whatsapp-banner.jpeg"}]
