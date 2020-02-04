@@ -38,4 +38,9 @@ var store = [{
         "excerpt":"Preparación para el OSCP (by s4vitar) Penetration Testing with Kali Linux (PWK) course and Offensive Security Certified Professional (OSCP) Cheat Sheet Esta guía es la misma que tengo publicada en mi Gist: https://gist.github.com/s4vitar/b88fefd5d9fbbdcc5f30729f7e06826e Índice y Estructura Principal Antecedentes - Experiencia Personal Buffer Overflow Windows (25 puntos) Fuzzing Calculando el Offset...","categories": ["Certification"],
         "tags": ["OSCP","Offensive Security","Pentesting","Examen","Guías"],
         "url": "http://localhost:4000/oscp-preparacion/",
-        "teaser":"http://localhost:4000/assets/images/oscp-preparation/oscp-logo.png"}]
+        "teaser":"http://localhost:4000/assets/images/oscp-preparation/oscp-logo.png"},{
+        "title": "Preparación OSWP",
+        "excerpt":"Preparación para el OSWP (by s4vitar) Offensive Security Wireless Attacks (WiFu) course and Offensive Security Wireless Professional (OSWP) Cheat Sheet Esta guía es la misma que tengo publicada en mi Gist: https://gist.github.com/s4vitar/3b42532d7d78bafc824fb28a95c8a5eb Índice y Estructura Principal Antecedentes - Experiencia Personal Estructura de los apuntes Redes WPA Conceptos básicos Modo monitor...","categories": ["Certification"],
+        "tags": ["OSWP","Offensive Security","Pentesting","Examen","Guías"],
+        "url": "http://localhost:4000/oswp-preparacion/",
+        "teaser":"http://localhost:4000/assets/images/oswp-preparation/oswp-logo.png"}]
