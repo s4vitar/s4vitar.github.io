@@ -36,6 +36,10 @@ Para los interesados, deciros que tenéis la charla disponible en el siguiente e
 
 - [h-c0n 2020 \| evilTrust - Herramienta Ofensiva](https://www.youtube.com/watch?v=-GIA9et7ZRg)
 
+También os la dejo por aquí para aquellos que la quieran ver directamente:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-GIA9et7ZRg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## ¿Qué es EvilTrust?
 
 **EvilTrust** es una herramienta ofensiva, ideal para robar los datos de acceso de un usuario. A altos rasgos, la herramienta se encarga de manera automatizada de desplegar un **Rogue AP**, quedando a la espera de clientes potenciales que se asocien a este para proseguir con el ataque.
