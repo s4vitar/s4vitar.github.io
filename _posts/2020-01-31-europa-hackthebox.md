@@ -17,6 +17,7 @@ tags:
   - Web Exploiting
   - Privilege Escalation
   - Python
+  - Pentesting
 ---
 
 <p align="center">

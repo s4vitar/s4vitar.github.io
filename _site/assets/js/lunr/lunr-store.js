@@ -16,7 +16,7 @@ var store = [{
         "teaser":"http://localhost:4000/assets/images/chatroulette-bypass/chatroulette-main.jpg"},{
         "title": "Europa - Hack The Box",
         "excerpt":"Una máquina muy interesante la cual resolvemos en mi canal de YouTube. En este caso, os comparto el script Autopwn que nos habíamos configurado en Python, donde tras su ejecución se nos automatiza la intrusión y la escalada de privilegios mediante el uso de la librería pwn. Para los interesados...","categories": ["HackTheBox","Autopwn","Scripting"],
-        "tags": ["Sqli","Web Exploiting","Privilege Escalation","Python"],
+        "tags": ["Sqli","Web Exploiting","Privilege Escalation","Python","Pentesting"],
         "url": "http://localhost:4000/europa-hackthebox/",
         "teaser":"http://localhost:4000/assets/images/htb-writeup-europa/europa_logo.png"},{
         "title": "FastTcpScan - Go",
@@ -33,4 +33,9 @@ var store = [{
         "excerpt":"En el siguiente artículo, os muestro una forma de mantener conversaciones encubiertas sin que quede registro en el historial de conversaciones de WhatsApp. De esta forma, dos personas pueden mantener una conversación mediante la lectura de logs a tiempo de escritura sin necesidad de enviar el mensaje. Antecedentes Para poder...","categories": ["Research"],
         "tags": ["WhatsApp","Canales Encubiertos"],
         "url": "http://localhost:4000/canal-encubierto-whatsapp/",
-        "teaser":"http://localhost:4000/assets/images/whatsapp-canal-encubierto/whatsapp-banner.jpeg"}]
+        "teaser":"http://localhost:4000/assets/images/whatsapp-canal-encubierto/whatsapp-banner.jpeg"},{
+        "title": "Preparación OSCP",
+        "excerpt":"Preparación para el OSCP (by s4vitar) Penetration Testing with Kali Linux (PWK) course and Offensive Security Certified Professional (OSCP) Cheat Sheet Esta guía es la misma que tengo publicada en mi Gist: https://gist.github.com/s4vitar/b88fefd5d9fbbdcc5f30729f7e06826e Índice y Estructura Principal Antecedentes - Experiencia Personal Buffer Overflow Windows (25 puntos) Fuzzing Calculando el Offset...","categories": ["Certification"],
+        "tags": ["OSCP","Offensive Security","Pentesting","Examen","Guías"],
+        "url": "http://localhost:4000/oscp-preparacion/",
+        "teaser":"http://localhost:4000/assets/images/oscp-preparation/oscp-logo.png"}]
