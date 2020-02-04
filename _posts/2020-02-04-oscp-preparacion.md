@@ -8,7 +8,7 @@ header:
   teaser: /assets/images/oscp-preparation/oscp-logo.png
   teaser_home_page: true
 categories:
-  - Certification
+  - Certificaciones
 tags:
   - OSCP
   - Offensive Security

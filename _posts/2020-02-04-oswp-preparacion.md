@@ -8,7 +8,7 @@ header:
   teaser: /assets/images/oswp-preparation/oswp-logo.png
   teaser_home_page: true
 categories:
-  - Certification
+  - Certificaciones
 tags:
   - OSWP
   - Offensive Security
