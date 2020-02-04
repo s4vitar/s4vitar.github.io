@@ -15,7 +15,7 @@ Mi nombre es Marcelo Vázquez (aka **s4vitar**), actualmente trabajo en **OneCyb
 
 Estas son las certificaciones que actualmente dispongo:
 
-- OSCP (Offensivce Security Certified Professional)
+- OSCP (Offensive Security Certified Professional)
 - OSWP (Offensive Security Wireless Professional)
 - CPHE (Certificado Profesional de Hacking Ético)
 - CHEE (Certificado de Hacking Ético Experto)
