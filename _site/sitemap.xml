@@ -61,4 +61,8 @@
 <url>
 <loc>http://localhost:4000/year-archive/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/videos/</loc>
+<lastmod>2020-02-06T12:12:01+00:00</lastmod>
+</url>
 </urlset>

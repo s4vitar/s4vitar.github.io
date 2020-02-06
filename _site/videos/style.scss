@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+@import 'themes/light.scss';
+
+@import 'themes/base.scss';
+
+@mixin wide{
+	@media screen and (min-width: 800px){
+		@content;
+	}
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Source Code Pro', monospace;
+	overflow-x: hidden;
+
+	.container {
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+		justify-content: space-between;
+
+		a {
+			text-decoration: none;
+		}
+
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+
+		.search {
+
+			.header {
+				h1 {
+					font-size: 4rem;
+					margin: 0.5rem;
+				}
+
+				padding-bottom: 1rem;
+			}
+
+			.query {
+				input {
+					width: 100%;
+					height: 5rem;
+					font-size: 2rem;
+					font-family: serif;
+					text-align: center;
+					margin: 0;
+					padding: 0;
+					border: 0;
+					font-family: 'Source Code Pro', monospace;
+					outline: none;
+				}
+			}
+
+			.results {
+				.results-table {
+
+					&.hide {
+						display: none;
+					}
+
+					table.results {
+						table-layout:fixed;
+						border: 0;
+
+						width: 100%;
+						margin: 0;
+
+						@include wide{
+							margin-left: 10vw;
+							margin-right: 10vw;
+							width: 80vw;
+						}
+
+						thead {
+							font-size: 1.2rem;
+							@include wide{
+								font-size: 2.5rem;
+							}
+						}
+
+						tbody {
+							td {
+								padding: 0.5rem 5px;
+								word-break: break-word;
+							}
+
+							tr {
+								font-size: 0.9rem;
+								@include wide{
+									font-size: 1.25rem;	
+								}
+								max-width: 10vw;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.subfooter{
+			h3{
+				padding: 0 4rem;
+			}
+		}
+
+		.footer {
+			display: block;
+			position: relative;
+			bottom: 0;
+			left: 0;
+
+			width: 100vw;
+			padding: 1rem;
+			font-size: 0.8rem;
+		}
+	}
+}

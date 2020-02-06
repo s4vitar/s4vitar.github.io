@@ -1,0 +1,47 @@
+body {
+	background: $colors-background;
+	color: $colors-text;
+
+	// When fading is enabled, transition all background-color changes
+	&.fade{
+		transition: background-color 0.5s;
+	}
+
+	@each $state, $color in $color-states {
+		&.color-#{$state} {
+			background: $color;
+		}
+	}
+
+	.container {
+		a {
+			color: $colors-links;
+		}
+
+		.search {
+			.header {
+				a {
+					color: $colors-links;
+				}
+			}
+
+			.results {
+				.results-table {
+					table.results {
+						tbody {
+							tr {
+								&:nth-child(odd) {
+									background-color: rgba(255, 255, 255, 0.2);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.footer {
+			background-color: rgba(255, 255, 255, 0.05);
+		}
+	}
+}

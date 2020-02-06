@@ -1,0 +1,15 @@
+$colors-background: black;
+$colors-text: white;
+$colors-links: #f2ff00;
+$colors-accent-1: #60a8f0;
+$colors-accent-2: #fa8840;
+$colors-accent-3: #fa5e3d;
+$colors-accent-4: #aa4cd9;
+$colors-accent-5: #108000;
+
+$color-states: (
+	"no-search": $colors-accent-1,
+	"no-results": $colors-accent-3,
+	"results-found": $colors-accent-5,
+	"too-many-results": $colors-accent-2
+);
