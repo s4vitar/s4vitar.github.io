@@ -21,6 +21,8 @@ tags:
 
 ## ¿Cómo reproducir este bug?
 
+Antes que nada, vamos a darle los buenos créditos al señor [@RiftWhiteHat](https://twitter.com/RiftWhiteHat), que fue el que me enseñó esta maravilla bajo la cual pueden surgir investigaciones para todo aquel que le quiera meter mano y tal vez descubrir nuevas cosas.
+
 Comenzamos presionando la combinación `Ctrl+Shift+C`. Posteriormente, nos dirigimos a la pestaña `Sources` desde WhatsApp Web:
 
 <center>
