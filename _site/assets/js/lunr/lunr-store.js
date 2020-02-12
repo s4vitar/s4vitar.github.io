@@ -48,4 +48,9 @@ var store = [{
         "excerpt":"Podéis encontrar esta herramienta en el siguiente enlace: https://github.com/s4vitar/ttyoverhttp ¿Qué es ttyOverHTTP? ttyOverHTTP no es más que una herramienta de utilidad la cual nos permitirá en base a una webshell, sin la necesidad de entablarnos una reverse shell, contar con una TTY completamente interactiva, haciendo uso para ello de la...","categories": ["Scripting","Utilidades"],
         "tags": ["Python","Web Exploiting","Herramientas"],
         "url": "http://localhost:4000/ttyoverhttp/",
-        "teaser":"http://localhost:4000/assets/images/ttyOverHTTP/ttyoverhttp-banner.jpg"}]
+        "teaser":"http://localhost:4000/assets/images/ttyOverHTTP/ttyoverhttp-banner.jpg"},{
+        "title": "Falsificación de mensajes en WhatsApp",
+        "excerpt":"¿Cómo reproducir este bug? Comenzamos presionando la combinación Ctrl+Shift+C. Posteriormente, nos dirigimos a la pestaña Sources desde WhatsApp Web: Una vez hecho, nos iremos a la pestaña Search situada en la zona inferior y buscaremos la cadena Promise.callSynchronously(function() Veremos que se produce un match. Haremos click en el resultado obtenido...","categories": ["Research"],
+        "tags": ["WhatsApp","Manipulación","Bug"],
+        "url": "http://localhost:4000/falsificacion-mensajes-whatsapp/",
+        "teaser":"http://localhost:4000/assets/images/whatsapp-fake-messages/whatsapp.jpg"}]

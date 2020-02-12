@@ -1,4 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-07T23:31:12+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">Preparación OSCP</title><link href="http://localhost:4000/oscp-preparacion/" rel="alternate" type="text/html" title="Preparación OSCP" /><published>2020-02-04T00:00:00+00:00</published><updated>2020-02-04T00:00:00+00:00</updated><id>http://localhost:4000/oscp-preparacion</id><content type="html" xml:base="http://localhost:4000/oscp-preparacion/">&lt;h1 id=&quot;preparación-para-el-oscp-by-s4vitar&quot;&gt;Preparación para el OSCP (by s4vitar)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-12T13:14:22+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">s4vitar.io</title><subtitle>Artículos sobre ciberseguridad, CTFs e investigaciones</subtitle><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><entry><title type="html">Falsificación de mensajes en WhatsApp</title><link href="http://localhost:4000/falsificacion-mensajes-whatsapp/" rel="alternate" type="text/html" title="Falsificación de mensajes en WhatsApp" /><published>2020-02-10T00:00:00+00:00</published><updated>2020-02-10T00:00:00+00:00</updated><id>http://localhost:4000/falsificacion-mensajes-whatsapp</id><content type="html" xml:base="http://localhost:4000/falsificacion-mensajes-whatsapp/">&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/whatsapp.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;h2 id=&quot;cómo-reproducir-este-bug&quot;&gt;¿Cómo reproducir este bug?&lt;/h2&gt;
+
+&lt;p&gt;Comenzamos presionando la combinación &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+Shift+C&lt;/code&gt;. Posteriormente, nos dirigimos a la pestaña &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sources&lt;/code&gt; desde WhatsApp Web:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step1.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Una vez hecho, nos iremos a la pestaña &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Search&lt;/code&gt; situada en la zona inferior y buscaremos la cadena &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Promise.callSynchronously(function()&lt;/code&gt;&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step2.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Veremos que se produce un match. Haremos click en el resultado obtenido y posteriormente en la zona superior seleccionamos el modo de visión &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pretty Print&lt;/code&gt; para que no nos sangren los ojos:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step3.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Ya en este punto, presionaremos la combinación de teclas &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+F&lt;/code&gt; y buscaremos nuevamente por la cadena &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Promise.callSynchronously(function()&lt;/code&gt;. En esta ocasión, buscaremos el segundo match que se produzca:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step4.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Posteriormente, establecemos un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Breakpoint&lt;/code&gt; en la sección &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var t = e.id;&lt;/code&gt;, haciendo para ello click en el número de la línea:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step5.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora, lo que haremos será lo siguiente. Nos iremos a una conversación cualquiera con uno de nuestros compañeros, seleccionaremos cualquier mensaje que nos haya enviado y le daremos a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Responder&lt;/code&gt; para hacer mención a ese comentario.&lt;/p&gt;
+
+&lt;p&gt;Escribiremos como respuesta lo que queramos, yo en este caso he escrito &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;No sé si conocerás el canal de S4vitar&lt;/code&gt;. Tras enviar el mensaje, veremos que alcanzamos el &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Breakpoint&lt;/code&gt; y que el mensaje no llega a enviarse:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step6.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si nos vamos a la pestaña &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Console&lt;/code&gt; dentro de la pestaña &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sources&lt;/code&gt;, veremos que en este preciso instante podemos desglosar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;e&lt;/code&gt;, pudiendo así ver todos los atributos que hacen referencia a la conversación que estamos llevando a cabo:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step7.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;En este caso, muestro sólo una porción para no compartir información privilegiada.&lt;/p&gt;
+
+&lt;p&gt;Ya en este punto, podremos manipular el mensaje de mención al que estamos respondiendo de la siguiente forma:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step8.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo único que tendremos que hacer posteriormente es darle al &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Play&lt;/code&gt; para que el mensaje siga su flujo y salgamos del &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Breakpoint&lt;/code&gt;:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step9.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez hecho, podremos ver lo siguiente:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step10.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hemos falsificado el mensaje al cual hacemos mención, haciendo creer al destinatario que nos ha escrito ese mensaje cuando no es así.&lt;/p&gt;
+
+&lt;p&gt;Todo esto desde WhatsApp web, y te preguntarás… ¿cómo se ve desde el móvil?, pues se vería exactamente igual:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step11.jpg&quot; width=&quot;400&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como veis, es un bug que a día de hoy se puede seguir explotando. De hecho, atendiendo a los atributos de la variable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;e&lt;/code&gt;, podréis ver que en verdad las posibilidades son infinitas.&lt;/p&gt;
+
+&lt;p&gt;Existen montón de valores que se pueden alterar, los cuales han llegado incluso a ocasionar Crasheos de la propia aplicación, como podréis ver en el siguiente artículo:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://research.checkpoint.com/2019/breakingapp-whatsapp-crash-data-loss-bug/&quot;&gt;https://research.checkpoint.com/2019/breakingapp-whatsapp-crash-data-loss-bug/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Este último en concreto ha sido parcheado, sin embargo sólo en el ámbito grupal (grupos de WhatsApp), en el sentido de que ya no afecta a los componentes de un grupo, sino al propio emisor del mensaje especialmente diseñado:&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/assets/images/whatsapp-fake-messages/step12.jpg&quot; width=&quot;400&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;¡Dejo en vuestras manos la investigación para que encontréis cosas chulas!&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="WhatsApp" /><category term="Manipulación" /><category term="Bug" /><summary type="html">En este artículo, os muestro cómo es posible manipular los mensajes de otras personas en WhatsApp, explotando para ello un bug que a día de hoy sigue funcionando.</summary></entry><entry><title type="html">Preparación OSCP</title><link href="http://localhost:4000/oscp-preparacion/" rel="alternate" type="text/html" title="Preparación OSCP" /><published>2020-02-04T00:00:00+00:00</published><updated>2020-02-04T00:00:00+00:00</updated><id>http://localhost:4000/oscp-preparacion</id><content type="html" xml:base="http://localhost:4000/oscp-preparacion/">&lt;h1 id=&quot;preparación-para-el-oscp-by-s4vitar&quot;&gt;Preparación para el OSCP (by s4vitar)&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://funkyimg.com/i/2MPB4.png&quot; alt=&quot;OSCP Image&quot; /&gt;&lt;/p&gt;
 &lt;h4 id=&quot;penetration-testing-with-kali-linux-pwk-course-and-offensive-security-certified-professional-oscp-cheat-sheet&quot;&gt;Penetration Testing with Kali Linux (PWK) course and Offensive Security Certified Professional (OSCP) Cheat Sheet&lt;/h4&gt;
@@ -9721,68 +9834,4 @@ content: PNG image data, 640 x 480, 8-bit/color RGBA, non-interlaced
 &lt;img src=&quot;/assets/images/chatroulette-bypass/man.jpg&quot; /&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Posteriormente, estuvimos debatiendo este señor y yo la máquina BigHead de HackTheBox, donde me comentaba una vía no intencionada de explotación para acceder al sistema, un grande este señor.&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="Chatroulette" /><category term="Burpsuite" /><category term="Bypassing" /><summary type="html">Hoy os vengo a mostrar un bypassing de lo más absurdo en la plataforma de Chatroulette. Supongo que sabréis que a la hora de entrar en Chatroulette se lleva a cabo una especie de validación, donde te piden que sonrías para que tu cara quede registrada en el sistema y posteriormente puedas acceder. Pues atentos a la jugada.</summary></entry><entry><title type="html">Exposición de datos médicos en hospitales</title><link href="http://localhost:4000/hospital-dicom-exposure/" rel="alternate" type="text/html" title="Exposición de datos médicos en hospitales" /><published>2020-01-29T00:00:00+00:00</published><updated>2020-01-29T00:00:00+00:00</updated><id>http://localhost:4000/hospital-dicom-exposure</id><content type="html" xml:base="http://localhost:4000/hospital-dicom-exposure/">&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Durante los últimos meses, hemos visto noticias por todos lados de datos médicos de pacientes los cuales han quedado expuestos por internet. Es algo alarmante pero no sorprendente teniendo en cuenta cómo está la seguridad a día de hoy.&lt;/p&gt;
-
-&lt;p&gt;En el siguiente artículo, os explico en qué consiste este “gran fallo” y cómo es posible que estos datos queden expuestos al alcance de cualquiera.&lt;/p&gt;
-
-&lt;h2 id=&quot;antecedentes&quot;&gt;Antecedentes&lt;/h2&gt;
-
-&lt;p&gt;La creciente tendencia hacia la digitalización de los hospitales, especialmente en el diagnóstico por imagen y la necesidad de comunicaciones médicas, ha puesto de relieve la necesidad de estandarizar los protocolos de comunicación y los formatos de la información en sanidad.&lt;/p&gt;
-
-&lt;p&gt;Uno de los estándares más exitosos hasta la fecha es &lt;strong&gt;DICOM&lt;/strong&gt; (siglas de Digital Imaging and Communications in Medicine).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-diagrama.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;DICOM&lt;/strong&gt; es un protocolo estándar de comunicación entre sistemas de información y a la vez un formato de almacenamiento de imágenes médicas que aparece como solución a los problemas de interoperabilidad entre tipos de dispositivos.&lt;/p&gt;
-
-&lt;p&gt;Una imagen médica por sí misma no aporta suficiente información… para que sea correctamente interpretada es necesario que vaya acompañada de datos del paciente y de la adquisición, entre otras cosas. Por eso formatos tradicionales como el .jpeg o el .png se quedan cortos.&lt;/p&gt;
-
-&lt;h2 id=&quot;dónde-está-el-problema-de-todo-esto&quot;&gt;¿Dónde está el problema de todo esto?&lt;/h2&gt;
-
-&lt;p&gt;El problema reside en que una gran cantidad de estos servicios están expuestos en internet, visibles desde Shodan:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-shodan.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Asimismo, para los que ya hayáis usado Shodan otras veces… como bien sabréis, es posible hasta ajustar nuestras &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;queries&lt;/code&gt; con ciertos parámetros adicionales:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-shodan-filter.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Y aquí es donde viene la pregunta, ¿cómo me conecto ahora al servicio?, gran pregunta Myke.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Radiant DICOM Viewer&lt;/strong&gt; es una aplicación para el procesamiento y visualizacion de imágenes médicas en formato DICOM. El visor permite a los usuarios abrir los estudios de CD / DVD / discos BluRay, la memoria flash, carpetas locales y de red.&lt;/p&gt;
-
-&lt;p&gt;Puedes descargar el Software con un periodo de prueba de 30 días a través del siguiente enlace:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.radiantviewer.com/es/&quot;&gt;Descargar Software&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Como podrás intuir, efectivamente… es a través de esta aplicación con la que nos podremos autenticar contra estos servidores.&lt;/p&gt;
-
-&lt;p&gt;Para evitar problemas, no voy a explicar el procedimiento para llevar a cabo la conexión… porque obviamente la asociación no es directa, hay que toquetear ciertas cosas y cambiar algunos métodos que ya vienen por defecto configurados con otros valores no deseados. Lo que sí que os puedo decir, es que es ya desde este Software con el que nos podemos asociar tranquilamente a estos servidores.&lt;/p&gt;
-
-&lt;p&gt;Os voy a mostrar un ejemplo de qué es lo que se vería una vez estando asociados a uno de ellos:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-connected.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Como podréis ver, se obtiene una lista de todos los pacientes (&lt;strong&gt;134 pacientes&lt;/strong&gt;) del centro médico en cuestión. Figuran numerosos campos, entre ellos el nombre del paciente, el tipo de reconocimiento médico que se está aplicando, su fecha de nacimiento, número de teléfono y otros datos de contacto.&lt;/p&gt;
-
-&lt;p&gt;Como os dije anteriormente, &lt;strong&gt;Radiant DICOM Viewer&lt;/strong&gt; sirve para procesar y visualizar imágenes médicas en formato DICOM. En caso de querer ver estas imágenes médicas, basta con hacer doble click en el paciente cuyos informes médicos queramos consultar:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-radiografia.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Al tratarse de una imagen, en este artículo no se aprecia, pero cada muestra viene acompañada de múltiples capturas, pudiendo ver una animación de la resonancia al presionar la tecla &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enter&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;De hecho, en caso de que una muestra posea múltiples capturas, se puede hacer incluso un modelaje 3D en base a los resultados obtenidos:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/hospital-dicom/dicom-3d.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;qué-demonios-está-pasando-aquí&quot;&gt;¿Qué demonios está pasando aquí?&lt;/h2&gt;
-
-&lt;p&gt;Muy buena pregunta, porque hasta yo mismo lo desconozco. Hasta donde he podido leer, todos estos servidores DICOM al parecer están expuestos públicamente con el objetivo de agilizar el “traspaso del historial médico de un paciente” de un centro médico a otro.&lt;/p&gt;
-
-&lt;p&gt;Es decir, imagina que por algún casual te tienen que enviar a otro hospital… pues en vez de enviar los resultados por correo (que tampoco sería óptimo), lo que hacen es transferir el expediente mediante el protocolo DICOM públicamente desde el propio centro médico al nuevo hospital. De hecho ni hace falta transferir datos, porque con tener la IP pública es simplemente asociarse y ya poder sacar el listado de pacientes… te buscarían y listo.&lt;/p&gt;
-
-&lt;p&gt;La verdadera “metedura de pata”, por así decirlo, es que DICOM no cuenta con autenticación, por lo que si está expuesto públicamente, no es necesario proporcionar usuario y contraseña para asociarse. Buena esa.&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="Hospitales" /><category term="Dicom" /><category term="Radiant" /><summary type="html">Durante los últimos meses, hemos visto noticias por todos lados de datos médicos de pacientes los cuales han quedado expuestos por internet. Es algo alarmante pero no sorprendente teniendo en cuenta cómo está la seguridad a día de hoy. En el siguiente artículo, os explico en qué consiste este `gran fallo` y cómo es posible que estos datos queden expuestos al alcance de cualquiera.</summary></entry></feed>
+&lt;p&gt;Posteriormente, estuvimos debatiendo este señor y yo la máquina BigHead de HackTheBox, donde me comentaba una vía no intencionada de explotación para acceder al sistema, un grande este señor.&lt;/p&gt;</content><author><name>S4vitar</name><email>s4vipriv@gmail.com</email></author><category term="Chatroulette" /><category term="Burpsuite" /><category term="Bypassing" /><summary type="html">Hoy os vengo a mostrar un bypassing de lo más absurdo en la plataforma de Chatroulette. Supongo que sabréis que a la hora de entrar en Chatroulette se lleva a cabo una especie de validación, donde te piden que sonrías para que tu cara quede registrada en el sistema y posteriormente puedas acceder. Pues atentos a la jugada.</summary></entry></feed>

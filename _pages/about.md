@@ -96,3 +96,7 @@ Asistente en los siguientes eventos de ciberseguridad:
 - PwnedCR 2019 (Costa Rica)
 - Navaja Negra 2019 (Albacete)
 - h-c0n 2020 (Madrid)
+
+## Otros
+
+- Administrador y creador del servidor de Discord **HackTheBox en Español** (Más de 400 miembros) ([Enlace](https://discord.org/u3dsh9M))
