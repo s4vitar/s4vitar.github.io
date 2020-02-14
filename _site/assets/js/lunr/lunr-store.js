@@ -50,7 +50,7 @@ var store = [{
         "url": "http://localhost:4000/ttyoverhttp/",
         "teaser":"http://localhost:4000/assets/images/ttyOverHTTP/ttyoverhttp-banner.jpg"},{
         "title": "Falsificación de mensajes en WhatsApp",
-        "excerpt":"¿Cómo reproducir este bug? Comenzamos presionando la combinación Ctrl+Shift+C. Posteriormente, nos dirigimos a la pestaña Sources desde WhatsApp Web: Una vez hecho, nos iremos a la pestaña Search situada en la zona inferior y buscaremos la cadena Promise.callSynchronously(function() Veremos que se produce un match. Haremos click en el resultado obtenido...","categories": ["Research"],
+        "excerpt":"¿Cómo reproducir este bug? Antes que nada, vamos a darle los buenos créditos al señor @RiftWhiteHat, que fue el que me enseñó esta maravilla bajo la cual pueden surgir investigaciones para todo aquel que le quiera meter mano y tal vez descubrir nuevas cosas. Comenzamos presionando la combinación Ctrl+Shift+C. Posteriormente,...","categories": ["Research"],
         "tags": ["WhatsApp","Manipulación","Bug"],
         "url": "http://localhost:4000/falsificacion-mensajes-whatsapp/",
         "teaser":"http://localhost:4000/assets/images/whatsapp-fake-messages/whatsapp.jpg"}]
