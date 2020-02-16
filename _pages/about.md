@@ -96,6 +96,7 @@ Asistente en los siguientes eventos de ciberseguridad:
 - PwnedCR 2019 (Costa Rica)
 - Navaja Negra 2019 (Albacete)
 - h-c0n 2020 (Madrid)
+- RootedCON 2020 (Madrid)
 
 ## Otros
 
