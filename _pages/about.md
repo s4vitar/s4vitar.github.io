@@ -77,6 +77,7 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 ## Apariciones
 
 - El cazador de cerebros (La 2 RTVE - La delincuencia digital): [Enlace al programa emitido](http://www.rtve.es/alacarta/videos/el-cazador-de-cerebros/cazador-cerebros-ciberataques-delincuencia-digital/5417722/)
+- Las pruebas médicas de miles de clínicas, accesibles en Internet (Eldia.es): [Enlace a la publicación](https://www.eldia.es/sociedad/2020/02/21/pruebas-medicas-miles-clinicas-accesibles/1053880.html)
 - Webinar interactivo (HackTheBox Latino) - Resolvendo máquina personal presentada en el evento Q4, la cual no pudo ser resuelta por ninguno de los participantes: [Ver webinar](https://www.youtube.com/watch?v=5AmJtyBphVE)
 - Cómo ser un pentester a nivel profesional - Charla [Ver charla](https://www.facebook.com/hackingEtico18/videos/vb.1592676964151994/185438342573111)
 - Seguridad y Hacking por ipv6 - Charla [Ver charla](https://www.youtube.com/watch?v=A445hnKq9wk)
