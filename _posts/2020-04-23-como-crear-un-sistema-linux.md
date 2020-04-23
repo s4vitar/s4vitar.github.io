@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Cómo crear un sistema Linux desde cero
+title: Cómo construir tu propio sistema Linux
 excerpt: "En este artículo, os enseño a crear vuestro propio sistema Linux desde cero, tomando completo control de las cosas que se instalan y arrancando el sistema como una nueva distribución."
 date: 2020-04-23
 classes: wide
