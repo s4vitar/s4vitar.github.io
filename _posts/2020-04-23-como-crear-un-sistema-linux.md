@@ -4487,7 +4487,7 @@ Quién sabe, igual podremos hacer luego una fusión con **S4viOS**.
 
 Para aquellos que por X razones quieran descargar la distribución (igual lo queréis para verificar ciertas cosas), os dejo el enlace de descarga de la máquina por aquí: 
 
-* https://drive.google.com/file/d/1GACSGENgHvWr2v_8JbcUieLyZAoU11qe/view?usp=sharing
+* [https://drive.google.com/file/d/1GACSGENgHvWr2v_8JbcUieLyZAoU11qe/view?usp=sharing](https://drive.google.com/file/d/1GACSGENgHvWr2v_8JbcUieLyZAoU11qe/view?usp=sharing)
 
 > **Usuario de la máquina**: root
 
