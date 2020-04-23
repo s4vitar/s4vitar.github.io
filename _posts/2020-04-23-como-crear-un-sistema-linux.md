@@ -25,7 +25,7 @@ tags:
 
 Antes que nada, deciros que toda esta guía la tenéis también disponible en mi Gist, desde donde os podéis dirigir directamente a través del índice a la sección que queráis:
 
-* https://gist.github.com/s4vitar/8a2b18ec1f1b16226e21d4b89cbef270
+* [https://gist.github.com/s4vitar/8a2b18ec1f1b16226e21d4b89cbef270](https://gist.github.com/s4vitar/8a2b18ec1f1b16226e21d4b89cbef270)
 
 Por alguna razón los eventos clickeables del índice desde esta página no son funcionales, así que cualquier cosa os podréis manejar por allí más cómodamente (No te olvides de dejar un Fav :P).
 
