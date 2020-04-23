@@ -23,6 +23,12 @@ tags:
 
 ![Portada OS](https://wallpaperaccess.com/full/981849.png)
 
+Antes que nada, deciros que toda esta guía la tenéis también disponible en mi Gist, desde donde os podéis dirigir directamente a través del índice a la sección que queráis:
+
+* https://gist.github.com/s4vitar/8a2b18ec1f1b16226e21d4b89cbef270
+
+Por alguna razón los eventos clickeables del índice desde esta página no son funcionales, así que cualquier cosa os podréis manejar por allí más cómodamente (No te olvides de dejar un Fav :P).
+
 ## Índice y Estructura Principal
 - [Antecedentes](#Antecedentes)
 - [Prerrequisitos](#Prerrequisitos)
@@ -188,8 +194,6 @@ tags:
 - [Creando archivos finales](#Creando-archivos-finales)
 - [Arrancando nuestra nueva distribución Linux S4viOS](#Arrancando-nuestra-nueva-distribución-Linux-S4viOS)
 
-
-     
 Antecedentes
 ===============================================================================================================================
 Antes que nada, me gustaría comentar una serie de puntos para aquellos que pretenden seguir esta guía.
