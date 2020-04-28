@@ -83,7 +83,7 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 - Cómo ser un pentester a nivel profesional - Charla [Ver charla](https://www.facebook.com/hackingEtico18/videos/vb.1592676964151994/185438342573111)
 - Seguridad y Hacking por ipv6 - Charla [Ver charla](https://www.youtube.com/watch?v=A445hnKq9wk)
 - Hacking Q&A con S4vitar - Julio Ureña y Takito [Ver charla](https://www.youtube.com/watch?v=GZFoNfCpcQc)
-- Charla h-c0n 2020 | evilTrust - Herramienta Ofensiva [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
+- Charla h-c0n 2020 / evilTrust - Herramienta Ofensiva [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
 - evilTrust (Herramienta Ofensiva) - Charla h-c0n 2020: [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
 - Canal de ciberseguridad en YouTube con más de 3.000 suscriptores: [Ver canal](https://youtube.com/s4vitar)
 
