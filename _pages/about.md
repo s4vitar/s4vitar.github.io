@@ -117,7 +117,7 @@ Asistente en los siguientes eventos de ciberseguridad:
 
 ## Otros
 
-- Administrador y creador del servidor de Discord **HackTheBox en Español** (Más de 1.300 miembros) ([Enlace](https://discord.org/u3dsh9M))
+- Administrador y creador del servidor de Discord **HackTheBox en Español** (Más de 1.300 miembros) ([Enlace](https://discord.gg/u3dsh9M))
 
 # Correo y contacto directo
 
