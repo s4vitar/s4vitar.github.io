@@ -59,7 +59,8 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 - [X.Org X Server 1.20.4 - Local Stack Overflow](https://www.exploit-db.com/exploits/47507)
 
 ## Experiencia
-- CyberSecurity Analyst en OneCyber / Penetration Tester / Red Team
+- CyberSecurity Analyst en EnigmaSec / Penetration Tester / Red Team
+- CyberSecurity Analyst en OneCyber (Binter) / Penetration Tester / Red Team
 - Formador en Seguridad Informática (Redes inalámbricas, Pentesting y Exploiting)
 - Arquitecto de CTFs en varios eventos de ciberseguridad (Hackron, Cybercamp, CyberEx, Q4 - HackTheBox Latino, ...)
 - Colaborador del evento de ciberseguridad [Hackron](https://hackron.com) celebrado en Canarias
@@ -74,6 +75,7 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 - Autor de la web [https://www.mundo-hackers.weebly.com](https://mundo-hackers.weebly.com), con más de 200 artículos escritos
 - Competidor de CTFs, logrando posicionar a la Universidad de La Laguna entre el TOP 3 universidades en la plataforma [HackTheBox](https://hackthebox.eu)
 - Miembro de la plataforma [HackerOne](https://hackerone.com), con registro a día de hoy de una vulnerabilidad crítica reportada a la entidad Worklytics ([Ver Perfil](https://hackerone.com/s4vitar))
+- Colaborador de HackTheBox en la resolución y aporte de writeups de máquinas retiradas
 
 ## Apariciones
 
@@ -90,8 +92,16 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 - Las pruebas médicas de miles de clínicas, accesibles en internet - Eldía.es [Ver publicación](https://www.eldia.es/sociedad/2020/02/21/pruebas-medicas-miles-clinicas-accesibles/1053880.html)
 - Secure Podcast - HackTheBox [Escuchar Podcast](https://securepodcast.com/audios/036/)
 
-## Asistencias
+# Herramientas
+Creador de las siguientes herramientas:
 
+- evilTrust (Herramienta ideal para el despliegue automatiado de un Rogue AP con capacidad de selección de plantilla + 2FA)[Enlace](https://github.com/s4vitar/evilTrust)
+- spoofMe (Programa ideal para el Spoofing de llamadas y mensajería instantánea desde terminal)[Enlace](https://github.com/s4vitar/spoofMe)
+- wifiCrack (Herramienta ideal para automatizar ataques WiFi WPA/WPA2 - PSK destinados a la obtención de la contraseña. Incluye PKMID Clientless Attack)[Enlace](https://github.com/s4vitar/wifiCrack)
+- rpcenum (Herramienta en Bash ideal para extraer la información más relevante de un dominio vía rpcclient)[Enlace](https://github.com/s4vitar/rpcenum)
+- fastTCPScan (Escáner que permite detectar de forma rápida y precisa los puertos TCP que una máquina tiene abiertos)[Enlace](https://github.com/s4vitar/fastTCPScan)
+
+## Asistencias
 Asistente en los siguientes eventos de ciberseguridad:
 
 - Hackron 2017 (Canarias)
