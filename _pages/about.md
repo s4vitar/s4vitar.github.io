@@ -87,7 +87,7 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 - Hacking Q&A con S4vitar - Julio Ureña y Takito [Ver charla](https://www.youtube.com/watch?v=GZFoNfCpcQc)
 - Charla h-c0n 2020 / evilTrust - Herramienta Ofensiva [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
 - evilTrust (Herramienta Ofensiva) - Charla h-c0n 2020: [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
-- Canal de ciberseguridad en YouTube con más de 4.000 suscriptores: [Ver canal](https://youtube.com/s4vitar)
+- Canal de ciberseguridad en YouTube con más de 5.000 suscriptores: [Ver canal](https://youtube.com/s4vitar)
 - Consecuencias legales y Hacking Ético: [Ver publicación](https://internautas.org/html/10399.html)
 - Las pruebas médicas de miles de clínicas, accesibles en internet - Eldía.es [Ver publicación](https://www.eldia.es/sociedad/2020/02/21/pruebas-medicas-miles-clinicas-accesibles/1053880.html)
 - Secure Podcast - HackTheBox [Escuchar Podcast](https://securepodcast.com/audios/036/)
@@ -117,7 +117,7 @@ Asistente en los siguientes eventos de ciberseguridad:
 
 ## Otros
 
-- Administrador y creador del servidor de Discord **HackTheBox en Español** (Más de 1.300 miembros) ([Enlace](https://discord.gg/u3dsh9M))
+- Administrador y creador del servidor de Discord **HackTheBox en Español** (Más de 1.400 miembros) ([Enlace](https://discord.gg/u3dsh9M))
 
 # Correo y contacto directo
 
