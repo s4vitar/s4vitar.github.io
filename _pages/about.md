@@ -17,6 +17,7 @@ Estas son las certificaciones que actualmente dispongo:
 
 - OSCP (Offensive Security Certified Professional)
 - OSWP (Offensive Security Wireless Professional)
+- eWPTxv2 (Web Penetration Tester eXtreme)
 - CPHE (Certificado Profesional de Hacking Ético)
 - CHEE (Certificado de Hacking Ético Experto)
 
@@ -76,6 +77,7 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 - Competidor de CTFs, logrando posicionar a la Universidad de La Laguna entre el TOP 3 universidades en la plataforma [HackTheBox](https://hackthebox.eu)
 - Miembro de la plataforma [HackerOne](https://hackerone.com), con registro a día de hoy de una vulnerabilidad crítica reportada a la entidad Worklytics ([Ver Perfil](https://hackerone.com/s4vitar))
 - Colaborador de HackTheBox en la resolución y aporte de writeups de máquinas retiradas
+- Creador de contenido (cursos) en la academia MasterMind ([Enlace](https://mastermind.ac))
 
 ## Apariciones
 
@@ -87,7 +89,7 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 - Hacking Q&A con S4vitar - Julio Ureña y Takito [Ver charla](https://www.youtube.com/watch?v=GZFoNfCpcQc)
 - Charla h-c0n 2020 / evilTrust - Herramienta Ofensiva [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
 - evilTrust (Herramienta Ofensiva) - Charla h-c0n 2020: [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
-- Canal de ciberseguridad en YouTube con más de 5.000 suscriptores: [Ver canal](https://youtube.com/s4vitar)
+- Canal de ciberseguridad en YouTube con más de 7.000 suscriptores: [Ver canal](https://youtube.com/s4vitar)
 - Consecuencias legales y Hacking Ético: [Ver publicación](https://internautas.org/html/10399.html)
 - Las pruebas médicas de miles de clínicas, accesibles en internet - Eldía.es [Ver publicación](https://www.eldia.es/sociedad/2020/02/21/pruebas-medicas-miles-clinicas-accesibles/1053880.html)
 - Secure Podcast - HackTheBox [Escuchar Podcast](https://securepodcast.com/audios/036/)
@@ -100,6 +102,9 @@ Creador de las siguientes herramientas:
 - [wifiCrack](https://github.com/s4vitar/wifiCrack) (Herramienta ideal para automatizar ataques WiFi WPA/WPA2 - PSK destinados a la obtención de la contraseña. Incluye PKMID Clientless Attack)
 - [rpcenum](https://github.com/s4vitar/rpcenum) (Herramienta en Bash ideal para extraer la información más relevante de un dominio vía rpcclient)
 - [fastTCPScan](https://github.com/s4vitar/fastTCPScan) (Escáner que permite detectar de forma rápida y precisa los puertos TCP que una máquina tiene abiertos)
+- [htbExplorer](https://github.com/s4vitar/htbExplorer) (Cliente de terminal hecho en Bash ideal para trabajar cómodamente desde consola sobre la plataforma de HackTheBox)
+- [btcAnalyzer](https://github.com/s4vitar/btcAnalyzer) (Herramienta ideal para la inspección de transacciones en el servicio de exploración de bloques de Bitcoin)
+- [AD-AutomationLab](https://github.com/s4vitar/AD-AutomationLab) (Herramienta en PowerShell ideal para desplegar tu propio entorno AD vulnerable de forma automatizada)
 
 ## Asistencias
 Asistente en los siguientes eventos de ciberseguridad:
@@ -117,7 +122,7 @@ Asistente en los siguientes eventos de ciberseguridad:
 
 ## Otros
 
-- Administrador y creador del servidor de Discord **HackTheBox en Español** (Más de 1.400 miembros) ([Enlace](https://discord.gg/u3dsh9M))
+- Administrador y creador del servidor de Discord **HackTheBox en Español** (Más de 2.400 miembros) ([Enlace](https://discord.gg/u3dsh9M))
 
 # Correo y contacto directo
 
