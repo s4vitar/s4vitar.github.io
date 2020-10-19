@@ -1,3 +1,4 @@
+
 ---
 layout: single
 title: Mi experiencia con la certificación eWPTxv2
@@ -38,7 +39,7 @@ Respecto al laboratorio, he de deciros que no puedo comentar nada al respecto, m
 
 ### ¿Es difícil la certificación?
 
-Para aquel o aquella que tenga planteado examinarse de esta certificación, recomiendo tener buenas bases previas sobre pentesting web antes de comenzar (Ojo, hablo sobre todo si pretendes ir directo al examen). Recomiendo haber teniendo experiencia y manejo al menos sobre los siguientes tipos de vulnerabilidades:
+Para aquel o aquella que tenga planteado examinarse de esta certificación, recomiendo de antes tener buenas bases previas sobre pentesting web (ojo, hablo sobre todo si pretendes ir directo al examen). Recomiendo haber teniendo experiencia y manejo al menos sobre los siguientes tipos de vulnerabilidades:
 
 * Inyecciones SQL (Manuales)
 * Xml External Entity Injections XXE (Incluido Blind XXE)
