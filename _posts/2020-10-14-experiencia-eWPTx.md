@@ -70,7 +70,7 @@ Estos son:
 * Leer cierto archivo alojado en una ruta interna del sistema.
 * Conseguir ejecución remota de comandos mediante la explotación de dos servicios que corren en la máquina, accesibles desde el servidor web.
 
-Si consigues estos objetivos y encima encuentras un buen puñado de vulnerabilidades extra, yo diría que ya te puedes quedar tranquilo/a. Recordad que no hay puntuación, no hay una nota en si que podáis calcular para saber más o menos la puntuación que podáis estar sacando, la idea es más bien encontrar todo lo que puedas.
+Si consigues estos objetivos y encima encuentras un buen puñado de vulnerabilidades extra, yo diría que ya te puedes quedar tranquilo/a. Recordad que no hay puntuación, no hay una nota en si que podáis calcular para saber más o menos el Score que podáis estar sacando, la idea es más bien encontrar todo lo que puedas.
 
 Bajo mi experiencia, he de decir que llegué a explotar algunas vulnerabilidades que me parecieron flipantes, en el sentido de que igual me esperaba que las vulnerabilidades a explotar iban a ser algo más sencillas, pero en absoluto... hay alguna que otra que te puede hacer perder bastante tiempo, sobre todo una que llevaré siempre conmigo en el corazón con la que estuve casi un día entero para sacarla (mucha metodología de prueba/error).
 
