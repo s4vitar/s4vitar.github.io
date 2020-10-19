@@ -35,7 +35,9 @@ Para que tengáis una idea de cosillas que llegué a explotar, pues hubieron des
 
 ### ¿Qué me pareció el laboratorio?
 
-Respecto al laboratorio, he de deciros que no puedo comentar nada al respecto, me hubiera gustado probarlo... pero quise aprovechar un cupón que salió en el mes de Septiembre para el Voucher, donde se te quedaba el precio a 300 euros... por lo que decidí ir directo al examen. Ir directo al examen supone que no te entregan documentación ni nada por el estilo, porque estás pagando únicamente para hacer el examen. Fue algo arriesgado probar a examinarse sin tener previo material, pero oye... si la jugada salía bien, pues chimpún y pa' dentro, de lo contrario en el peor de los casos pues ya pagaba el curso más adelante y le metía más caña, ¡pero el que no arriesga no gana!.
+Respecto al laboratorio, he de deciros que no puedo comentar nada al respecto, me hubiera gustado probarlo... pero quise aprovechar un cupón que salió en el mes de Septiembre para el Voucher, donde se te quedaba el precio a 300 euros... por lo que decidí ir directo al examen. Ir directo al examen supone que no te entregan documentación ni nada por el estilo, porque estás pagando únicamente para hacer el examen. 
+
+Fue algo arriesgado probar a examinarse sin tener previo material, pero oye... si la jugada salía bien, pues chimpún y pa' dentro, de lo contrario en el peor de los casos pues ya pagaba el curso más adelante y le metía más caña, ¡pero el que no arriesga no gana!.
 
 ### ¿Es difícil la certificación?
 
