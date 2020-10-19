@@ -1,4 +1,3 @@
-
 ---
 layout: single
 title: Mi experiencia con la certificación eWPTxv2
