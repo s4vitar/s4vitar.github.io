@@ -63,7 +63,9 @@ Con tener dominio de estos lenguajes, me refiero no sólo a nivel de programaci�
 
 La idea del examen es la siguiente, te dan un acceso por VPN y te piden que efectúes un análisis de vulnerabilidades sobre un dominio que cuenta con tres subdominios. El análisis de vulnerabilidades comprende no sólo la identificación de las vulnerabilidades, sino también la explotación de las mismas.
 
-Aislado a todo lo que encuentres, sí que es cierto que hay una serie de requisitos que tienes que cumplir para lograr aprobar el examen, aunque lo indican como "Los requisitos necesarios pero no suficientes para aprobar...". Estos son:
+Aislado a todo lo que encuentres, sí que es cierto que hay una serie de requisitos que tienes que cumplir para lograr aprobar el examen, aunque lo indican como "Los requisitos necesarios pero no suficientes para aprobar...". 
+
+Estos son:
 
 * Leer cierto archivo alojado en una ruta interna del sistema.
 * Conseguir ejecución remota de comandos mediante la explotación de dos servicios que corren en la máquina, accesibles desde el servidor web.
