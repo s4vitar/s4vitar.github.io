@@ -28,7 +28,7 @@ tags:
 
 Ya era hora de redactar este artículo... entre tantas cosas en las que ando metido no he podido sacar un rato para comentaros mi experiencia con esta certificación. Ahora que estoy algo menos ajetreado en esta noche de inspiración... vamos a analizar qué es lo que está pasando aquí. 
 
-La certificación **eWPTXv2**, ¿merece la pena?, pues mi respuesta es si. La verdad es que ha sido una certificación desafiante, sobre todo a la hora de hacer el examen, porque me encontré con más cosas de las que me pensaba que habrían y la verdad es que hubo un puro mixto de vulnerabilidades a explotar. 
+La certificación **eWPTXv2**, ¿merece la pena?, pues mi respuesta es un 'si'. La verdad es que ha sido una certificación desafiante, sobre todo a la hora de hacer el examen, porque me encontré con más cosas de las que me pensaba que habrían y la verdad es que hubo un puro mixto de vulnerabilidades a explotar. 
 
 Para que tengáis una idea de cosillas que llegué a explotar, pues hubieron desde inyecciones SQL, hasta ataques Blind XXE, ataques de deserialización combinados con vulnerabilidades de tipo SSRF para conseguir RCE, ataques XSS, Object Serialization y otras muchas cosas más. La dinámica del examen es algo distinta a la que tiene por ejemplo Offensive Security, me refiero, en vez de ponerte una serie de objetivos acompañados con un Score para saber en todo momento si llegas a la nota para aprobar o no, esto es más a lo... 'Tú encuentra todo lo que puedas, que ya luego nosotros revisamos el informe final y en base a lo que hayas encontrado decidimos'.
 
