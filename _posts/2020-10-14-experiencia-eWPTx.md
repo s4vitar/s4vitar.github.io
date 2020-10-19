@@ -24,7 +24,7 @@ tags:
 
 ## Certificación eWPTxv2
 
-#### Mi experiencia personal
+### Mi experiencia personal
 
 Ya era hora de redactar este artículo... entre tantas cosas en las que ando metido no he podido sacar un rato para comentaros mi experiencia con esta certificación. Ahora que estoy algo menos ajetreado en esta noche de inspiración... vamos a analizar qué es lo que está pasando aquí. 
 
@@ -32,11 +32,11 @@ La certificación **eWPTXv2**, ¿merece la pena?, pues mi respuesta es si. La ve
 
 Para que tengáis una idea de cosillas que llegué a explotar, pues hubieron desde inyecciones SQL, hasta ataques Blind XXE, ataques de deserialización combinados con vulnerabilidades de tipo SSRF para conseguir RCE, ataques XSS, Object Serialization y otras muchas cosas más. La dinámica del examen es algo distinta a la que tiene por ejemplo Offensive Security, me refiero, en vez de ponerte una serie de objetivos acompañados con un Score para saber en todo momento si llegas a la nota para aprobar o no, esto es más a lo... 'Tú encuentra todo lo que puedas, que ya luego nosotros revisamos el informe final y en base a lo que hayas encontrado decidimos'.
 
-#### ¿Qué me pareció el laboratorio?
+### ¿Qué me pareció el laboratorio?
 
 Respecto al laboratorio, he de deciros que no puedo comentar nada al respecto, me hubiera gustado probarlo... pero quise aprovechar un cupón que salió para el Voucher donde se te quedaba el precio a 300 euros y decidí ir directo al examen. Ir directo al examen supone que no te entregan documentación ni nada por el estilo, porque estás pagando únicamente para hacer el examen, en mi caso quise aprovechar la ocasión para ver si colaba y conseguía sacarla, de lo contrario en el peor de los casos pues ya pagaba el curso más adelante y le metía más caña, ¡pero el que no arriesga no gana!.
 
-#### ¿Es difícil la certificación?
+### ¿Es difícil la certificación?
 
 Para aquel o aquella que tenga planteado examinarse de esta certificación, recomiendo tener buenas bases previas sobre pentesting web antes de comenzar (Ojo, hablo sobre todo si pretendes ir directo al examen). Recomiendo haber teniendo experiencia y manejo al menos sobre los siguientes tipos de vulnerabilidades:
 
@@ -57,7 +57,7 @@ Entre otras muchas más que probablemente me esté dejando en el tintero, pero p
 
 Con tener dominio de estos lenguajes, me refiero no sólo a nivel de programación, sino también a nivel de entender qué puede estar haciendo un código por detrás... tratando de reversearlo o aprovechar el mismo para computar ciertas cosas (Si doy más pistas es Spoiler, así que preferible dejarlo en el aire xD).
 
-#### ¿Cómo es el examen?
+### ¿Cómo es el examen?
 
 La idea del examen es la siguiente, te dan un acceso por VPN y te piden que efectúes un análisis de vulnerabilidades sobre un dominio que cuenta con tres subdominios. El análisis de vulnerabilidades comprende no sólo la identificación de las vulnerabilidades, sino también la explotación de las mismas.
 
@@ -70,13 +70,13 @@ Si consigues estos objetivos y encima encuentras un buen puñado de vulnerabilid
 
 Bajo mi experiencia, he de decir que llegué a explotar algunas vulnerabilidades que me parecieron flipantes, en el sentido de que igual me esperaba que las vulnerabilidades a explotar iban a ser algo más sencillas, pero en absoluto... hay alguna que otra que te puede hacer perder bastante tiempo, sobre todo una que llevaré siempre conmigo en el corazón con la que estuve casi un día entero para sacarla (mucha metodología de prueba/error).
 
-#### ¿Cuánto dura el examen?
+### ¿Cuánto dura el examen?
 
 El examen dura un total de siete días. En mi caso necesité cuatro días para encontrar todas las vulnerabilidades que pude y un día para generar el informe final. Efectivamente chavales, lo que tanto nos gusta a todos, una vez finalizas es necesario detallar todo lo encontrado a través de un reporte técnico y ejecutivo, incorporando las capturas de pantalla necesarias y las pruebas de concepto de todo lo que hayas hecho.
 
 Aislado al examen, la fase de documentación son otros siete días aparte, pero bueno en ese aspecto fui bastante rápido porque ya había estado previamente trabajando en una plantilla hecha en LaTeX para ir a tiro hecho (igual que en el OSCP), así que la documentación fue lo que menos me llevó. En conclusión, contando con los días para la examinación y la creación del reporte final, el examen son unos catorce días, pero una vez finalizados los siete primeros días del examen, te cortan la conexión por VPN.
 
-#### ¿Qué toca ahora?
+### ¿Qué toca ahora?
 
 He estado pensando en hacer el AWAE (OSWE) de Offensive Security, así en caso de sacarla os puedo comentar diferencias con respecto a la certificación eWPTXv2, porque por el momento no puedo hacer distinción.
 
