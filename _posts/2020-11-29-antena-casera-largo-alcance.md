@@ -67,7 +67,7 @@ A la hora de montar las tuercas y arandelas, debéis ser meticulosos con las med
 
 Una vez con todo esto montado, obviamente... necesitamos de un sistema de sujeción.
 
-Por un lado, deberemos sujetar el final de la antena. Para ello, mediante un hueco en la tapa de la lata, pasaremos un clavo en el centro. Dicho extremo de la sujeción atrapará el clave por dentro de la lata, pudiendo así cerrarla y dejando el interior terminado.
+Por un lado, deberemos sujetar el final de la antena. Para ello, mediante un hueco en la tapa de la lata, pasaremos un clavo en el centro. Dicho extremo de la sujeción atrapará el clavo por dentro de la lata, pudiendo así cerrarla y dejando el interior terminado.
 
 Por otro lado, en cuanto al exterior... mediante otro sistema de agarre, sostendremos el clavo por fuera, enganchando el mismo a un cable coaxial por el centro:
 
