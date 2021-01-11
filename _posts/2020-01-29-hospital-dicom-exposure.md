@@ -27,8 +27,6 @@ La creciente tendencia hacia la digitalización de los hospitales, especialmente
 
 Uno de los estándares más exitosos hasta la fecha es **DICOM** (siglas de Digital Imaging and Communications in Medicine).
 
-![](/assets/images/hospital-dicom/dicom-diagrama.png)
-
 **DICOM** es un protocolo estándar de comunicación entre sistemas de información y a la vez un formato de almacenamiento de imágenes médicas que aparece como solución a los problemas de interoperabilidad entre tipos de dispositivos.
 
 Una imagen médica por sí misma no aporta suficiente información... para que sea correctamente interpretada es necesario que vaya acompañada de datos del paciente y de la adquisición, entre otras cosas. Por eso formatos tradicionales como el .jpeg o el .png se quedan cortos.
