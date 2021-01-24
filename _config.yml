@@ -103,8 +103,7 @@ analytics:
 author:
   name             : "S4vitar"
   avatar           : "/assets/images/avatar.png"
-  bio              : "Pentester / OSCP / OSWP / eWPTxv2"
-  email            : "s4vipriv@gmail.com"
+  bio              : "CyberSecurity Analyst at ElevenPaths / OSCP / OSWP / eWPTxv2 / CPHE / CHEE"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -130,6 +129,7 @@ author:
   weibo            :
   xing             :
   youtube          : "https://youtube.com/c/s4vitar"
+  discord		   : "https://discord.gg/u3dsh9M"
 
 
 # Reading Files
