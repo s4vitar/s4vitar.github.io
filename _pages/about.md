@@ -11,7 +11,7 @@ date: 2020-01-29
 <img src="/assets/images/about/photo-portada.jpeg">
 </p>
 
-Mi nombre es Marcelo Vázquez (aka **s4vitar**), actualmente trabajo en **ElevenPaths**.
+Mi nombre es Marcelo Vázquez (aka **s4vitar**), actualmente trabajo en **ElevenPaths** como analista de ciberseguridad (Penetration Tester).
 
 Estas son las certificaciones que actualmente dispongo:
 
@@ -20,6 +20,7 @@ Estas son las certificaciones que actualmente dispongo:
 - eWPTxv2 (Web Penetration Tester eXtreme)
 - CPHE (Certificado Profesional de Hacking Ético)
 - CHEE (Certificado de Hacking Ético Experto)
+- eJPT (eLearnSecurity Junior Penetration Tester)
 
 <p align="center">
 <img src="/assets/images/about/certs.jpeg">
@@ -62,6 +63,7 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 ## Experiencia
 - CyberSecurity Analyst en EnigmaSec / Penetration Tester / Red Team
 - CyberSecurity Analyst en OneCyber (Binter) / Penetration Tester / Red Team
+- CyberSecurity Analyst en ElevenPaths / Penetration Tester / Red Team
 - Formador en Seguridad Informática (Redes inalámbricas, Pentesting y Exploiting)
 - Arquitecto de CTFs en varios eventos de ciberseguridad (Hackron, Cybercamp, CyberEx, Q4 - HackTheBox Latino, ...)
 - Colaborador del evento de ciberseguridad [Hackron](https://hackron.com) celebrado en Canarias
@@ -89,10 +91,13 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 - Hacking Q&A con S4vitar - Julio Ureña y Takito [Ver charla](https://www.youtube.com/watch?v=GZFoNfCpcQc)
 - Charla h-c0n 2020 / evilTrust - Herramienta Ofensiva [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
 - evilTrust (Herramienta Ofensiva) - Charla h-c0n 2020: [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
-- Canal de ciberseguridad en YouTube con más de 14.000 suscriptores: [Ver canal](https://youtube.com/s4vitar)
 - Consecuencias legales y Hacking Ético: [Ver publicación](https://internautas.org/html/10399.html)
 - Las pruebas médicas de miles de clínicas, accesibles en internet - Eldía.es [Ver publicación](https://www.eldia.es/sociedad/2020/02/21/pruebas-medicas-miles-clinicas-accesibles/1053880.html)
 - Secure Podcast - HackTheBox [Escuchar Podcast](https://securepodcast.com/audios/036/)
+- WiseTalks - Charla con HackWise [Ver charla](https://www.youtube.com/watch?v=spT4KpuX1KM)
+- Charla con Varo [Ver charla](https://www.youtube.com/watch?v=QYZhao4NbMQ)
+- Entrevista en Flu-Project [Ver entrevista](https://www.flu-project.com/2021/03/entrevista-marcelo-vazquez-aka-s4vitar.html)
+- Entrevista en HackBySecurity [Ver entrevista](https://www.hackbysecurity.com/entrevista/marcelo-vazquez)
 
 # Herramientas
 Creador de las siguientes herramientas:
@@ -122,7 +127,10 @@ Asistente en los siguientes eventos de ciberseguridad:
 
 ## Otros
 
-- Administrador y creador del servidor de Discord **H4ckNet** (Más de 4.400 miembros) ([Enlace](https://discord.gg/u3dsh9M))
+- Administrador y creador del servidor de Discord **H4ckNet** (Más de 8.300 miembros) ([Enlace](https://discord.gg/u3dsh9M))
+- Creador de contenido de ciberseguridad y hacking ético en la plataforma de YouTube (Más de 31.000 seguidores) ([Enlace](https://youtube.com/s4vitar))
+- Streamer de ciberseguridad y hacking ético en la plataforma de Twitch (Más de 9.300 seguidores) ([Enlace](https://twitch.tv/s4vitaar))
+- Primer canal de ciberseguridad de habla hispana socio de Twitch y con la cuenta verificada en nuestra categoría.
 
 # Correo y contacto directo
 
