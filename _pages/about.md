@@ -11,7 +11,7 @@ date: 2020-01-29
 <img src="/assets/images/about/photo-portada.jpeg">
 </p>
 
-Mi nombre es Marcelo Vázquez (aka **s4vitar**), actualmente trabajo en **ElevenPaths** como analista de ciberseguridad (Penetration Tester).
+Mi nombre es Marcelo Vázquez (aka **s4vitar**), actualmente trabajo como Streamer en **Twitch** y como creador de contenido en diversas plataformas.
 
 Estas son las certificaciones que actualmente dispongo:
 
@@ -75,6 +75,8 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 - Speaker en el evento de ciberseguridad Hackron 2020 - Canarias ([Enlace](https://hackron.com))
 - Speaker en el evento OWASP - Universidad de La Laguna 
 - Speaker en el evento TACS - Congreso de Ciberseguridad
+- Speaker en el evento DragonJar 2021
+- Speaker en el evento HBSCon 2021
 - Autor de la web [https://www.mundo-hackers.weebly.com](https://mundo-hackers.weebly.com), con más de 200 artículos escritos
 - Competidor de CTFs, logrando posicionar a la Universidad de La Laguna entre el TOP 3 universidades en la plataforma [HackTheBox](https://hackthebox.eu)
 - Miembro de la plataforma [HackerOne](https://hackerone.com), con registro a día de hoy de una vulnerabilidad crítica reportada a la entidad Worklytics ([Ver Perfil](https://hackerone.com/s4vitar))
@@ -83,6 +85,7 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 
 ## Apariciones
 
+- Entrevista realizada por Chema Alonso - El Lado del Mal [Ver Entrevista](https://www.elladodelmal.com/2021/09/entrevista-s4vitar-pentester.html?m=0)
 - El cazador de cerebros (La 2 RTVE - La delincuencia digital): [Enlace al programa emitido](http://www.rtve.es/alacarta/videos/el-cazador-de-cerebros/cazador-cerebros-ciberataques-delincuencia-digital/5417722/)
 - Las pruebas médicas de miles de clínicas, accesibles en Internet (Eldia.es): [Enlace a la publicación](https://www.eldia.es/sociedad/2020/02/21/pruebas-medicas-miles-clinicas-accesibles/1053880.html)
 - Webinar interactivo (HackTheBox Latino) - Resolvendo máquina personal presentada en el evento Q4, la cual no pudo ser resuelta por ninguno de los participantes: [Ver webinar](https://www.youtube.com/watch?v=5AmJtyBphVE)
@@ -124,12 +127,14 @@ Asistente en los siguientes eventos de ciberseguridad:
 - Navaja Negra 2019 (Albacete)
 - h-c0n 2020 (Madrid)
 - RootedCON 2020 (Madrid)
+- DragonJar 2021 (México)
+- HBSCon 2021 (España)
 
 ## Otros
 
-- Administrador y creador del servidor de Discord **H4ckNet** (Más de 8.300 miembros) ([Enlace](https://discord.gg/u3dsh9M))
-- Creador de contenido de ciberseguridad y hacking ético en la plataforma de YouTube (Más de 31.000 seguidores) ([Enlace](https://youtube.com/s4vitar))
-- Streamer de ciberseguridad y hacking ético en la plataforma de Twitch (Más de 9.300 seguidores) ([Enlace](https://twitch.tv/s4vitaar))
+- Administrador y creador del servidor de Discord **H4ckNet** (Más de 13.000 miembros) ([Enlace](https://discord.gg/u3dsh9M))
+- Creador de contenido de ciberseguridad y hacking ético en la plataforma de YouTube (Más de 44.000 seguidores) ([Enlace](https://youtube.com/s4vitar))
+- Streamer de ciberseguridad y hacking ético en la plataforma de Twitch (Más de 17.000 seguidores) ([Enlace](https://twitch.tv/s4vitaar))
 - Primer canal de ciberseguridad de habla hispana socio de Twitch y con la cuenta verificada en nuestra categoría.
 
 # Correo y contacto directo
