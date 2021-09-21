@@ -85,22 +85,22 @@ Estos son los exploits que hasta la fecha de hoy tengo registrados:
 
 ## Apariciones
 
-- Entrevista realizada por Chema Alonso - El Lado del Mal [Ver Entrevista](https://www.elladodelmal.com/2021/09/entrevista-s4vitar-pentester.html?m=0)
+- Entrevista realizada por Chema Alonso - El Lado del Mal: [Ver Entrevista](https://www.elladodelmal.com/2021/09/entrevista-s4vitar-pentester.html?m=0)
 - El cazador de cerebros (La 2 RTVE - La delincuencia digital): [Enlace al programa emitido](http://www.rtve.es/alacarta/videos/el-cazador-de-cerebros/cazador-cerebros-ciberataques-delincuencia-digital/5417722/)
 - Las pruebas médicas de miles de clínicas, accesibles en Internet (Eldia.es): [Enlace a la publicación](https://www.eldia.es/sociedad/2020/02/21/pruebas-medicas-miles-clinicas-accesibles/1053880.html)
 - Webinar interactivo (HackTheBox Latino) - Resolvendo máquina personal presentada en el evento Q4, la cual no pudo ser resuelta por ninguno de los participantes: [Ver webinar](https://www.youtube.com/watch?v=5AmJtyBphVE)
-- Cómo ser un pentester a nivel profesional - Charla [Ver charla](https://www.facebook.com/hackingEtico18/videos/vb.1592676964151994/185438342573111)
-- Seguridad y Hacking por ipv6 - Charla [Ver charla](https://www.youtube.com/watch?v=A445hnKq9wk)
-- Hacking Q&A con S4vitar - Julio Ureña y Takito [Ver charla](https://www.youtube.com/watch?v=GZFoNfCpcQc)
-- Charla h-c0n 2020 / evilTrust - Herramienta Ofensiva [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
+- Cómo ser un pentester a nivel profesional - Charla: [Ver charla](https://www.facebook.com/hackingEtico18/videos/vb.1592676964151994/185438342573111)
+- Seguridad y Hacking por ipv6 - Charla: [Ver charla](https://www.youtube.com/watch?v=A445hnKq9wk)
+- Hacking Q&A con S4vitar - Julio Ureña y Takito: [Ver charla](https://www.youtube.com/watch?v=GZFoNfCpcQc)
+- Charla h-c0n 2020 / evilTrust - Herramienta Ofensiva: [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
 - evilTrust (Herramienta Ofensiva) - Charla h-c0n 2020: [Ver charla](https://www.youtube.com/watch?v=-GIA9et7ZRg)
 - Consecuencias legales y Hacking Ético: [Ver publicación](https://internautas.org/html/10399.html)
-- Las pruebas médicas de miles de clínicas, accesibles en internet - Eldía.es [Ver publicación](https://www.eldia.es/sociedad/2020/02/21/pruebas-medicas-miles-clinicas-accesibles/1053880.html)
-- Secure Podcast - HackTheBox [Escuchar Podcast](https://securepodcast.com/audios/036/)
-- WiseTalks - Charla con HackWise [Ver charla](https://www.youtube.com/watch?v=spT4KpuX1KM)
-- Charla con Varo [Ver charla](https://www.youtube.com/watch?v=QYZhao4NbMQ)
-- Entrevista en Flu-Project [Ver entrevista](https://www.flu-project.com/2021/03/entrevista-marcelo-vazquez-aka-s4vitar.html)
-- Entrevista en HackBySecurity [Ver entrevista](https://www.hackbysecurity.com/entrevista/marcelo-vazquez)
+- Las pruebas médicas de miles de clínicas, accesibles en internet - Eldía.es: [Ver publicación](https://www.eldia.es/sociedad/2020/02/21/pruebas-medicas-miles-clinicas-accesibles/1053880.html)
+- Secure Podcast - HackTheBox: [Escuchar Podcast](https://securepodcast.com/audios/036/)
+- WiseTalks - Charla con HackWise: [Ver charla](https://www.youtube.com/watch?v=spT4KpuX1KM)
+- Charla con Varo: [Ver charla](https://www.youtube.com/watch?v=QYZhao4NbMQ)
+- Entrevista en Flu-Project: [Ver entrevista](https://www.flu-project.com/2021/03/entrevista-marcelo-vazquez-aka-s4vitar.html)
+- Entrevista en HackBySecurity: [Ver entrevista](https://www.hackbysecurity.com/entrevista/marcelo-vazquez)
 
 # Herramientas
 Creador de las siguientes herramientas:
