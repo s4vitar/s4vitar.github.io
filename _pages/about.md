@@ -21,6 +21,7 @@ Estas son las certificaciones que actualmente dispongo:
 - CPHE (Certificado Profesional de Hacking Ético)
 - CHEE (Certificado de Hacking Ético Experto)
 - eJPT (eLearnSecurity Junior Penetration Tester)
+- eCPPTv2 (eLearnSecurity Professional Penetration Tester)
 
 <p align="center">
 <img src="/assets/images/about/certs.jpeg">
