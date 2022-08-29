@@ -53,4 +53,24 @@ var store = [{
         "excerpt":"¿Cómo reproducir este bug? Antes que nada, vamos a darle los buenos créditos al señor @RiftWhiteHat, que fue el que me enseñó esta maravilla bajo la cual pueden surgir investigaciones para todo aquel que le quiera meter mano y tal vez descubrir nuevas cosas. Comenzamos presionando la combinación Ctrl+Shift+C. Posteriormente,...","categories": ["Research"],
         "tags": ["WhatsApp","Manipulación","Bug"],
         "url": "http://localhost:4000/falsificacion-mensajes-whatsapp/",
-        "teaser":"http://localhost:4000/assets/images/whatsapp-fake-messages/whatsapp.jpg"}]
+        "teaser":"http://localhost:4000/assets/images/whatsapp-fake-messages/whatsapp.jpg"},{
+        "title": "Cómo construir tu propio sistema Linux",
+        "excerpt":"Cómo construir tu propio sistema Linux (S4viOS) Antes que nada, deciros que toda esta guía la tenéis también disponible en mi Gist, desde donde os podéis dirigir directamente a través del índice a la sección que queráis: https://gist.github.com/s4vitar/8a2b18ec1f1b16226e21d4b89cbef270 Por alguna razón los eventos clickeables del índice desde esta página no...","categories": ["Configuración","Linux From Scratch","LFS"],
+        "tags": ["Linux","Linux From Scratch","LFS","Personalización","S4viOS"],
+        "url": "http://localhost:4000/como-crear-un-sistema-linux/",
+        "teaser":"http://localhost:4000/assets/images/s4viOS/s4viOS.png"},{
+        "title": "Cómo explotar la vulnerabilidad Zerologon",
+        "excerpt":"¿Es realmente crítico Zerologon? La respuesta es un si rotundo. No creo que haga falta a estas alturas comentar qué es Zerologon… ya existen montón de artículos a disposición detallando de forma técnica y ejecutiva en qué consiste la vulnerabilidad. Centrémonos en la explotación, ¿cómo se explota zerologon?, vamos a...","categories": ["Research","Utilidades","Exploits","Vulnerabilidades"],
+        "tags": ["Pentesting","Herramientas","Windows","Linux","Domain Controller","Guías","Privilege Escalation"],
+        "url": "http://localhost:4000/como-explotar-vulnerabilidad-zerologon/",
+        "teaser":"http://localhost:4000/assets/images/zerologon/zerologon.png"},{
+        "title": "Mi experiencia con la certificación eWPTxv2",
+        "excerpt":"Certificación eWPTxv2 Mi experiencia personal Ya era hora de redactar este artículo… entre tantas cosas en las que ando metido no he podido sacar un rato para comentaros mi experiencia con esta certificación. Ahora que estoy algo menos ajetreado en esta noche de inspiración… vamos a analizar qué es lo...","categories": ["Certificaciones","Utilidades"],
+        "tags": ["Pentesting","eWPTXv2","Web Exploiting","Web Penetration Testing","Examen"],
+        "url": "http://localhost:4000/experiencia-eWPTx/",
+        "teaser":"http://localhost:4000/assets/images/eWPTxv2/eWPTxv2.png"},{
+        "title": "Creando una antena casera direccional de largo alcance",
+        "excerpt":"¿Cómo crear una antena casera de largo alcance? Hoy aprenderás a crear una antena casera para que tu nivel de Hack llegue a distancias inimaginables. Empecemos por el principio, ¿por qué elementos está compuesta la antena? Parecerá una broma, pero no… es una lata de Pringles. Estas latas pueden convertirse...","categories": ["WiFi","Utilidades","Casero"],
+        "tags": ["Pentesting","OSWP","Antena Casera"],
+        "url": "http://localhost:4000/antena-casera-largo-alcance/",
+        "teaser":"http://localhost:4000/assets/images/antenacasera/antena.jpg"}]
