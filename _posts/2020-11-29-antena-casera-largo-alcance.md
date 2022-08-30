@@ -8,9 +8,7 @@ header:
   teaser: /assets/images/antenacasera/antena.jpg
   teaser_home_page: true
 categories:
-  - WiFi
-  - Utilidades
-  - Casero
+  - Portswigger
 tags:
   - Pentesting
   - OSWP
