@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>            DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up - Aitor      Ciberseguridad y Hacking Ético      </title>
-<meta name="description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:">
+<!-- begin _includes/seo.html --><title>            DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up - Aitor      Ciberseguridad y Hacking Ético      </title>
+<meta name="description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”:">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Aitor | Ciberseguridad y Hacking Ético">
-<meta property="og:title" content="DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up">
-<meta property="og:url" content="http://localhost:4000/dom-xss-sink-using-location-search/">
+<meta property="og:title" content="DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up">
+<meta property="og:url" content="http://localhost:4000/dom-xss-jquery-href-attribute-sink-using-location/">
 
 
-  <meta property="og:description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:">
+  <meta property="og:description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”:">
 
 
 
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/dom-xss-sink-using-location-search/">
+<link rel="canonical" href="http://localhost:4000/dom-xss-jquery-href-attribute-sink-using-location/">
 
 
 
@@ -164,7 +164,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up</li>
+        <li class="current">DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up</li>
       
     
   </ol>
@@ -287,15 +287,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up">
-    <meta itemprop="description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:">
+    <meta itemprop="headline" content="DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up">
+    <meta itemprop="description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”:">
     <meta itemprop="datePublished" content="August 31, 2022">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up
+          <h1 id="page-title" class="page__title" itemprop="headline">DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up
 </h1>
           
         </header>
@@ -309,61 +309,83 @@
           
           
         </p>
-        <p>En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:</p>
+        <p>En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/1.png" width="1000" />
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/1.png" width="1000" />
 </p>
 <p><br /></p>
 
-<p>Lo primero de todo como siempre es acceder al laboratorio:</p>
+<p>En este caso, para resolver el laboratorio tenemos que ejecutar un <code class="language-plaintext highlighter-rouge">alert</code> que nos devuelva las cookies.</p>
+
+<p>Lo primero de todo es acceder al laboratorio:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/2.png" width="1000" />
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/2.png" width="1000" />
 </p>
 <p><br /></p>
 
-<p>Una vez accedido, vemos una barra de búsqueda. Por lo que vamos a buscar cualquier cosa:</p>
+<p>Una vez accedidos, nos dirigimos a la parte de enviar feedback, ya que, en el enunciado es donde se nos indica que se encuentra el XSS:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/3.png" width="1000" />
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/3.png" width="1000" />
 </p>
 <p><br /></p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/4.png" width="1000" />
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/4.png" width="1000" />
 </p>
 <p><br /></p>
 
-<p>Si nos fijamos, lo que hemos buscado se ve reflejado en la web. Y si damos click derecho y vemos la parte del código fuente donde se situa, vemos que se almacena en el innerHTML del tag <span>.</span></p>
+<p>Cuando accedemos, si nos fijamos en la <code class="language-plaintext highlighter-rouge">URL</code>, podemos ver que de forma por defecto se nos añade el parámetro <code class="language-plaintext highlighter-rouge">returnPath</code>:</p>
 
-<p>Por lo que conociendo esto, podemos intentar usar en la búsqueda un payload especialmente diseñado para escaparnos de este tag, y ejecutar código Javascript. Por ejemplo, usaremos el siguiente payload:</p>
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/5.png" width="1000" />
+</p>
+<p><br /></p>
 
-<p>Por ejemplo vamos a usar:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ &lt;/span&gt;&lt;img src=/ onerror=alert(1) /&gt;//
+<p>Vamos a probar a añadirle cualquier valor al parámetro:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/6.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>En principio no pasa nada, pero si ponemos el ratón encima del hiperenlace de “Back”:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/7.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>Vemos como el valor que hemos colocado en la variable, se implemente en el atributo href de este elemento. Por lo que es tan sencillo como colocar un payload que nos ejecute el alert cuando demos click en el botón:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ javascript:alert(document.cookie)
 </code></pre></div></div>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/5.png" width="1000" />
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/8.png" width="1000" />
 </p>
 <p><br /></p>
 
+<p>Como vemos, conseguimos resolver el laboratorio, y desde el punto de vista del código fuente, lo que hemos conseguido es lo siguiente:</p>
+
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/6.png" width="1000" />
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/9.png" width="1000" />
 </p>
 <p><br /></p>
 
-<p>Al buscar por él, podemos ver como se nos ejecuta con éxito el payload. Hemos pasado de:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ &lt;span id=”searchMessage”&gt;hola&lt;/span&gt;
-</code></pre></div></div>
-<p>a esto:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ &lt;span id=”searchMessage”&gt;&lt;/span&gt;&lt;img src=/ onerror=alert(1) /&gt;//&lt;/span&gt;
-</code></pre></div></div>
+<p>Ahora, si damos click en el hiperenlace “Back”:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/7.png" width="1000" />
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/10.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>Se nos ejecutará el código Javascript que hemos indicado:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/11.png" width="1000" />
 </p>
 <p><br /></p>
 
@@ -433,11 +455,11 @@
       
   <nav class="pagination">
     
-      <a href="/dom-xss-jquery-href-attribute-sink-using-location/" class="pagination--pager" title="DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up
+      <a href="/dom-xss-document.write-sink/" class="pagination--pager" title="DOM XSS in document.write sink using source location.search – PortSwigger Write Up
 ">Previous</a>
     
     
-      <a href="/reflected-xss-into-html/" class="pagination--pager" title="Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up
+      <a href="/dom-xss-sink-using-location-search/" class="pagination--pager" title="DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up
 ">Next</a>
     
   </nav>

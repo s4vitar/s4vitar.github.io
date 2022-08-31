@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-31T14:57:17+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aitor | Ciberseguridad y Hacking Ético</title><subtitle>Artículos sobre ciberseguridad, CTF y desarrollo web</subtitle><author><name>Aitorgg02</name></author><entry><title type="html">DOM XSS in document.write sink using source location.search – PortSwigger Write Up</title><link href="http://localhost:4000/dom-xss-document.write-sink/" rel="alternate" type="text/html" title="DOM XSS in document.write sink using source location.search – PortSwigger Write Up" /><published>2022-08-31T00:00:00+02:00</published><updated>2022-08-31T00:00:00+02:00</updated><id>http://localhost:4000/dom-xss-document.write-sink</id><content type="html" xml:base="http://localhost:4000/dom-xss-document.write-sink/">&lt;p&gt;En este post vamos a estar resolviendo el laboratorio: “DOM XSS in document.write sink using source location.search”:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-31T15:42:22+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aitor | Ciberseguridad y Hacking Ético</title><subtitle>Artículos sobre ciberseguridad, CTF y desarrollo web</subtitle><author><name>Aitorgg02</name></author><entry><title type="html">DOM XSS in document.write sink using source location.search – PortSwigger Write Up</title><link href="http://localhost:4000/dom-xss-document.write-sink/" rel="alternate" type="text/html" title="DOM XSS in document.write sink using source location.search – PortSwigger Write Up" /><published>2022-08-31T00:00:00+02:00</published><updated>2022-08-31T00:00:00+02:00</updated><id>http://localhost:4000/dom-xss-document.write-sink</id><content type="html" xml:base="http://localhost:4000/dom-xss-document.write-sink/">&lt;p&gt;En este post vamos a estar resolviendo el laboratorio: “DOM XSS in document.write sink using source location.search”:&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
      &lt;img src=&quot;/assets/images/portswigger/dom_xss_document.write_sink_using_source/1.png&quot; width=&quot;1000&quot; /&gt;
@@ -60,7 +60,87 @@
 &lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;¡Un saludo y espero que os sirva de apoyo!&lt;/p&gt;</content><author><name>Aitorgg02</name></author><category term="Burpsuite" /><category term="JavaScript" /><category term="XSS" /><summary type="html">En este post vamos a estar resolviendo el laboratorio: “DOM XSS in document.write sink using source location.search”:</summary></entry><entry><title type="html">DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up</title><link href="http://localhost:4000/dom-xss-sink-using-location-search/" rel="alternate" type="text/html" title="DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up" /><published>2022-08-31T00:00:00+02:00</published><updated>2022-08-31T00:00:00+02:00</updated><id>http://localhost:4000/dom-xss-sink-using-location-search</id><content type="html" xml:base="http://localhost:4000/dom-xss-sink-using-location-search/">&lt;p&gt;En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:&lt;/p&gt;
+&lt;p&gt;¡Un saludo y espero que os sirva de apoyo!&lt;/p&gt;</content><author><name>Aitorgg02</name></author><category term="Burpsuite" /><category term="JavaScript" /><category term="XSS" /><summary type="html">En este post vamos a estar resolviendo el laboratorio: “DOM XSS in document.write sink using source location.search”:</summary></entry><entry><title type="html">DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up</title><link href="http://localhost:4000/dom-xss-jquery-href-attribute-sink-using-location/" rel="alternate" type="text/html" title="DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up" /><published>2022-08-31T00:00:00+02:00</published><updated>2022-08-31T00:00:00+02:00</updated><id>http://localhost:4000/dom-xss-jquery-href-attribute-sink-using-location</id><content type="html" xml:base="http://localhost:4000/dom-xss-jquery-href-attribute-sink-using-location/">&lt;p&gt;En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/1.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;En este caso, para resolver el laboratorio tenemos que ejecutar un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alert&lt;/code&gt; que nos devuelva las cookies.&lt;/p&gt;
+
+&lt;p&gt;Lo primero de todo es acceder al laboratorio:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/2.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez accedidos, nos dirigimos a la parte de enviar feedback, ya que, en el enunciado es donde se nos indica que se encuentra el XSS:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/3.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/4.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cuando accedemos, si nos fijamos en la &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;URL&lt;/code&gt;, podemos ver que de forma por defecto se nos añade el parámetro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;returnPath&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/5.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vamos a probar a añadirle cualquier valor al parámetro:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/6.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;En principio no pasa nada, pero si ponemos el ratón encima del hiperenlace de “Back”:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/7.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vemos como el valor que hemos colocado en la variable, se implemente en el atributo href de este elemento. Por lo que es tan sencillo como colocar un payload que nos ejecute el alert cuando demos click en el botón:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;❯ javascript:alert(document.cookie)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/8.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como vemos, conseguimos resolver el laboratorio, y desde el punto de vista del código fuente, lo que hemos conseguido es lo siguiente:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/9.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora, si damos click en el hiperenlace “Back”:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/10.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Se nos ejecutará el código Javascript que hemos indicado:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+     &lt;img src=&quot;/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/11.png&quot; width=&quot;1000&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;¡Un saludo y espero que os sirva de apoyo!&lt;/p&gt;</content><author><name>Aitorgg02</name></author><category term="Burpsuite" /><category term="JavaScript" /><category term="XSS" /><summary type="html">En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”:</summary></entry><entry><title type="html">DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up</title><link href="http://localhost:4000/dom-xss-sink-using-location-search/" rel="alternate" type="text/html" title="DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up" /><published>2022-08-31T00:00:00+02:00</published><updated>2022-08-31T00:00:00+02:00</updated><id>http://localhost:4000/dom-xss-sink-using-location-search</id><content type="html" xml:base="http://localhost:4000/dom-xss-sink-using-location-search/">&lt;p&gt;En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
      &lt;img src=&quot;/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/1.png&quot; width=&quot;1000&quot; /&gt;
@@ -74,7 +154,7 @@
 &lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Una vez accedidos, vemos una barra de búsqueda. Por lo que vamos a buscar cualquier cosa:&lt;/p&gt;
+&lt;p&gt;Una vez accedido, vemos una barra de búsqueda. Por lo que vamos a buscar cualquier cosa:&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
      &lt;img src=&quot;/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/3.png&quot; width=&quot;1000&quot; /&gt;
@@ -118,7 +198,7 @@
 &lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;¡Un saludo y espero que os sirva de apoyo!&lt;/p&gt;</content><author><name>Aitorgg02</name></author><category term="Burpsuite" /><category term="JavaScript" /><category term="XSS" /><summary type="html">En este post vamos a estar resolviendo el laboratorio: “DOM XSS in document.write sink using source location.search”:</summary></entry><entry><title type="html">Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up</title><link href="http://localhost:4000/reflected-xss-into-html/" rel="alternate" type="text/html" title="Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up" /><published>2022-08-31T00:00:00+02:00</published><updated>2022-08-31T00:00:00+02:00</updated><id>http://localhost:4000/reflected-xss-into-html</id><content type="html" xml:base="http://localhost:4000/reflected-xss-into-html/">&lt;p&gt;En este post vamos a estar resolviendo el laboratorio de PortSwigger: “Reflected XSS into HTML context with nothing encoded.”&lt;/p&gt;
+&lt;p&gt;¡Un saludo y espero que os sirva de apoyo!&lt;/p&gt;</content><author><name>Aitorgg02</name></author><category term="Burpsuite" /><category term="JavaScript" /><category term="XSS" /><summary type="html">En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:</summary></entry><entry><title type="html">Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up</title><link href="http://localhost:4000/reflected-xss-into-html/" rel="alternate" type="text/html" title="Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up" /><published>2022-08-31T00:00:00+02:00</published><updated>2022-08-31T00:00:00+02:00</updated><id>http://localhost:4000/reflected-xss-into-html</id><content type="html" xml:base="http://localhost:4000/reflected-xss-into-html/">&lt;p&gt;En este post vamos a estar resolviendo el laboratorio de PortSwigger: “Reflected XSS into HTML context with nothing encoded.”&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
      &lt;img src=&quot;/assets/images/portswigger/xss_into_html_context_with_nothing_encoded/1.png&quot; width=&quot;1000&quot; /&gt;

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up
-excerpt: "En este post vamos a estar resolviendo el laboratorio: “DOM XSS in document.write sink using source location.search”:
+excerpt: "En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:
 "
 date: 2022-08-31
 classes: wide
@@ -28,7 +28,7 @@ Lo primero de todo como siempre es acceder al laboratorio:
      <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/2.png" width="1000">
 </p><br>
 
-Una vez accedidos, vemos una barra de búsqueda. Por lo que vamos a buscar cualquier cosa:
+Una vez accedido, vemos una barra de búsqueda. Por lo que vamos a buscar cualquier cosa:
 
 <p align="center">
      <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/3.png" width="1000">

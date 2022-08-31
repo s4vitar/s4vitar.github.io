@@ -4,8 +4,13 @@ var store = [{
         "tags": ["Burpsuite","JavaScript","XSS"],
         "url": "http://localhost:4000/dom-xss-document.write-sink/",
         "teaser":null},{
+        "title": "DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up",
+        "excerpt":"En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”: En este caso, para resolver el laboratorio tenemos que ejecutar un alert que nos devuelva las cookies. Lo primero de todo es acceder al laboratorio: Una vez accedidos, nos dirigimos...","categories": ["Portswigger"],
+        "tags": ["Burpsuite","JavaScript","XSS"],
+        "url": "http://localhost:4000/dom-xss-jquery-href-attribute-sink-using-location/",
+        "teaser":null},{
         "title": "DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up",
-        "excerpt":"En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”: Lo primero de todo como siempre es acceder al laboratorio: Una vez accedidos, vemos una barra de búsqueda. Por lo que vamos a buscar cualquier cosa: Si nos fijamos, lo que hemos buscado...","categories": ["Portswigger"],
+        "excerpt":"En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”: Lo primero de todo como siempre es acceder al laboratorio: Una vez accedido, vemos una barra de búsqueda. Por lo que vamos a buscar cualquier cosa: Si nos fijamos, lo que hemos buscado...","categories": ["Portswigger"],
         "tags": ["Burpsuite","JavaScript","XSS"],
         "url": "http://localhost:4000/dom-xss-sink-using-location-search/",
         "teaser":null},{

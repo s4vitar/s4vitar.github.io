@@ -5,6 +5,10 @@
 <lastmod>2022-08-31T00:00:00+02:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/dom-xss-jquery-href-attribute-sink-using-location/</loc>
+<lastmod>2022-08-31T00:00:00+02:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/dom-xss-sink-using-location-search/</loc>
 <lastmod>2022-08-31T00:00:00+02:00</lastmod>
 </url>

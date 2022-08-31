@@ -9,27 +9,29 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>            DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up - Aitor      Ciberseguridad y Hacking Ético      </title>
-<meta name="description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:">
+<!-- begin _includes/seo.html --><title>            Creando una antena casera direccional de largo alcance - Aitor      Ciberseguridad y Hacking Ético      </title>
+<meta name="description" content="¿Te gustaría aprender a crear una antena casera de largo alcance para hackearlos a todos?, toma asiento que te lo explico.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Aitor | Ciberseguridad y Hacking Ético">
-<meta property="og:title" content="DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up">
-<meta property="og:url" content="http://localhost:4000/dom-xss-sink-using-location-search/">
+<meta property="og:title" content="Creando una antena casera direccional de largo alcance">
+<meta property="og:url" content="http://localhost:4000/antena-casera-largo-alcance/">
 
 
-  <meta property="og:description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:">
-
-
-
+  <meta property="og:description" content="¿Te gustaría aprender a crear una antena casera de largo alcance para hackearlos a todos?, toma asiento que te lo explico.">
 
 
 
+  <meta property="og:image" content="http://localhost:4000/assets/images/antenacasera/antena.jpg">
 
-  <meta property="article:published_time" content="2022-08-31T00:00:00+02:00">
+
+
+
+
+  <meta property="article:published_time" content="2020-11-29T00:00:00+01:00">
 
 
 
@@ -40,7 +42,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/dom-xss-sink-using-location-search/">
+<link rel="canonical" href="http://localhost:4000/antena-casera-largo-alcance/">
 
 
 
@@ -164,7 +166,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up</li>
+        <li class="current">Creando una antena casera direccional de largo alcance</li>
       
     
   </ol>
@@ -287,15 +289,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up">
-    <meta itemprop="description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:">
-    <meta itemprop="datePublished" content="August 31, 2022">
+    <meta itemprop="headline" content="Creando una antena casera direccional de largo alcance">
+    <meta itemprop="description" content="¿Te gustaría aprender a crear una antena casera de largo alcance para hackearlos a todos?, toma asiento que te lo explico.">
+    <meta itemprop="datePublished" content="November 29, 2020">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up
+          <h1 id="page-title" class="page__title" itemprop="headline">Creando una antena casera direccional de largo alcance
 </h1>
           
         </header>
@@ -305,69 +307,83 @@
         
         <p class="page__meta">
           
-            <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2022-08-31T00:00:00+02:00">August 31, 2022 </time>&emsp;
+            <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2020-11-29T00:00:00+01:00">November 29, 2020 </time>&emsp;
           
           
         </p>
-        <p>En este post vamos a estar resolviendo el laboratorio: “DOM XSS in innerHTML sink using source location.search”:</p>
+        <p align="center">
+<img src="/assets/images/antenacasera/portada-antena.jpg" />
+</p>
+
+<h2 id="cómo-crear-una-antena-casera-de-largo-alcance">¿Cómo crear una antena casera de largo alcance?</h2>
+
+<p>Hoy aprenderás a crear una antena casera para que tu nivel de Hack llegue a distancias inimaginables.</p>
+
+<p>Empecemos por el principio, ¿por qué elementos está compuesta la antena?</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/1.png" width="1000" />
+<img src="/assets/images/antenacasera/antena.jpg" />
 </p>
-<p><br /></p>
 
-<p>Lo primero de todo como siempre es acceder al laboratorio:</p>
+<p>Parecerá una broma, pero no… es una lata de Pringles. Estas latas pueden convertirse en antenas WiFi caseras direccionales, otorgándonos la capacidad de recibir señales inalámbricas de aquellas redes que se encuentren bastante lejos.</p>
+
+<p>Algunos de los componentes que vamos a estar comentando los podrás conseguir en la ferretería más cercana o de confianza. Esto es simplemente acercaros a la persona que os atienda y le comentáis que queréis estar Hack… ya con esto, sabrá a qué habéis venido y lo que estáis buscando.</p>
+
+<p>El primer paso que debes seguir es colocar la lata vacía de Pringles sobre una mesa y medir la longitud de la misma con una cinta métrica. Marca un punto sobre su punto medio, con un permanente o con lo que consideres (mientras lo veas)… ya que en caso de usar un trípode tendrás que engancharlo en este punto para equilibrar el peso y lograr estabilidad, resultando más sencillo maniobrar con nuestro experimento.</p>
+
+<p>¿Qué hay dentro de la lata?, vamos a echarle un ojo:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/2.png" width="1000" />
+<img src="/assets/images/antenacasera/interior-lata1.jpg" />
 </p>
-<p><br /></p>
 
-<p>Una vez accedido, vemos una barra de búsqueda. Por lo que vamos a buscar cualquier cosa:</p>
+<p>Os lo muestro también con la parte superior destapada para los/as curiosos/as:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/3.png" width="1000" />
+<img src="/assets/images/antenacasera/interior-lata2.jpg" />
 </p>
-<p><br /></p>
+
+<p>Como se puede apreciar, necesitaréis de una varilla roscada de 140 mm de longitud y 3 mm de grosor. Lo más probable es que también necesitéis 5 arandelas (una de ellas en la imagen no se aprecia porque estaría por el otro lado de la lata, la cual sustenta toda la base de la antena bajo presión acompañándola de una tuerca).</p>
+
+<p>Si hacemos cálculos, tuercas en total… necesitarías 8 (sin contar con la que está por el otro lado).</p>
+
+<p>El conjunto de arandelas con la varilla, facilita la recepción de las ondas de frecuencia WiFi (2.4 GHZ) en el interior del tubo, el cual es de papel de aluminio, reflejando así en el culo del bote la señal y amplificando en consecuencia la misma sobre la llave USB WiFi:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/4.png" width="1000" />
+<img src="/assets/images/antenacasera/medidasexactas.jpg" />
 </p>
-<p><br /></p>
 
-<p>Si nos fijamos, lo que hemos buscado se ve reflejado en la web. Y si damos click derecho y vemos la parte del código fuente donde se situa, vemos que se almacena en el innerHTML del tag <span>.</span></p>
-
-<p>Por lo que conociendo esto, podemos intentar usar en la búsqueda un payload especialmente diseñado para escaparnos de este tag, y ejecutar código Javascript. Por ejemplo, usaremos el siguiente payload:</p>
-
-<p>Por ejemplo vamos a usar:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ &lt;/span&gt;&lt;img src=/ onerror=alert(1) /&gt;//
-</code></pre></div></div>
+<p>A la hora de montar las tuercas y arandelas, debéis ser meticulosos con las medidas entre arandelas grandes… pues conseguiremos así que la onda realice la parábola lo mejor posible:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/5.png" width="1000" />
+<img src="/assets/images/antenacasera/medidas.jpg" />
 </p>
-<p><br /></p>
+
+<p>Una vez con todo esto montado, obviamente… necesitamos de un sistema de sujeción.</p>
+
+<p>Por un lado, deberemos sujetar el final de la antena. Para ello, mediante un hueco en la tapa de la lata, pasaremos un clavo en el centro. Dicho extremo de la sujeción atrapará el clavo por dentro de la lata, pudiendo así cerrarla y dejando el interior terminado.</p>
+
+<p>Por otro lado, en cuanto al exterior… mediante otro sistema de agarre, sostendremos el clavo por fuera, enganchando el mismo a un cable coaxial por el centro:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/6.png" width="1000" />
+<img src="/assets/images/antenacasera/enganche.jpg" />
 </p>
-<p><br /></p>
 
-<p>Al buscar por él, podemos ver como se nos ejecuta con éxito el payload. Hemos pasado de:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ &lt;span id=”searchMessage”&gt;hola&lt;/span&gt;
-</code></pre></div></div>
-<p>a esto:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ &lt;span id=”searchMessage”&gt;&lt;/span&gt;&lt;img src=/ onerror=alert(1) /&gt;//&lt;/span&gt;
-</code></pre></div></div>
+<p>Desde que ya tengamos todo esto conectado, el extremo del cable coaxial tan sólo lo tendremos que enganchar a nuestro conector USB WiFi:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/dom_xss_innerhtml_sink_using_source_location.search/7.png" width="1000" />
+<img src="/assets/images/antenacasera/conexionfinal.jpg" />
 </p>
-<p><br /></p>
 
-<p>¡Un saludo y espero que os sirva de apoyo!</p>
+<p>En la imagen adjunta, el recepetor de señales tiene la propia antena que viene por defecto puesta… pero es en este punto cuando se la quitaremos y la conectaremos a la antena formada por el bote de Pringles.</p>
+
+<p>Finalmente, la antena quedaría de la siguiente forma:</p>
+
+<p align="center">
+<img src="/assets/images/antenacasera/hack.jpg" />
+</p>
+
+<p>De manera casi inmediata, notaremos que el nivel de Hack habrá aumentado y ya estaremos preparados para ver una gran cantidad de redes WiFi en el entorno.</p>
 
         
       </section>
@@ -388,15 +404,15 @@
     
       
       
-      <a href="/tags/#burpsuite" class="page__taxonomy-item" rel="tag">Burpsuite</a><span class="sep">, </span>
+      <a href="/tags/#antena-casera" class="page__taxonomy-item" rel="tag">Antena Casera</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#javascript" class="page__taxonomy-item" rel="tag">JavaScript</a><span class="sep">, </span>
+      <a href="/tags/#oswp" class="page__taxonomy-item" rel="tag">OSWP</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#xss" class="page__taxonomy-item" rel="tag">XSS</a>
+      <a href="/tags/#pentesting" class="page__taxonomy-item" rel="tag">Pentesting</a>
     
     </span>
   </p>
@@ -424,7 +440,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Fecha:</strong> <time datetime="2022-08-31T00:00:00+02:00">August 31, 2022</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Fecha:</strong> <time datetime="2020-11-29T00:00:00+01:00">November 29, 2020</time></p>
         
       </footer>
 
@@ -433,7 +449,7 @@
       
   <nav class="pagination">
     
-      <a href="/dom-xss-jquery-href-attribute-sink-using-location/" class="pagination--pager" title="DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up
+      <a href="/como-crear-un-sistema-linux/" class="pagination--pager" title="Cómo construir tu propio sistema Linux
 ">Previous</a>
     
     
