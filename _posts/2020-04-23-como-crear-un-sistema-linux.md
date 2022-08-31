@@ -8,9 +8,7 @@ header:
   teaser: /assets/images/s4viOS/s4viOS.png
   teaser_home_page: true
 categories:
-  - Configuración
-  - Linux From Scratch
-  - LFS
+  - Portswigger
 tags:
   - Linux
   - Linux From Scratch

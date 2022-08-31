@@ -8,7 +8,7 @@ header:
   teaser: /assets/images/evil-trust/evil.png
   teaser_home_page: true
 categories:
-  - Scripting
+  - Portswigger
 tags:
   - GitHub
   - Bash

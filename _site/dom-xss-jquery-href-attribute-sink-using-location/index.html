@@ -1,0 +1,511 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>            DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up - Aitor      Ciberseguridad y Hacking Ético      </title>
+<meta name="description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”:">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Aitor | Ciberseguridad y Hacking Ético">
+<meta property="og:title" content="DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up">
+<meta property="og:url" content="http://localhost:4000/dom-xss-jquery-href-attribute-sink-using-location/">
+
+
+  <meta property="og:description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-08-31T00:00:00+02:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/dom-xss-jquery-href-attribute-sink-using-location/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aitorgg02",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Aitor | Ciberseguridad y Hacking Ético Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+                
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/" >Artículos</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Categorías</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Etiquetas</a>
+            </li><li class="masthead__menu-item">
+              <a href="/buscador/" >Buscador</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+    
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/avatar.png" alt="Aitorgg02" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Aitorgg02</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        CyberSecurity and Web Developer
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/aitor-gonzález-gonzález-44b836189" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aitorgg02" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up">
+    <meta itemprop="description" content="En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”:">
+    <meta itemprop="datePublished" content="August 31, 2022">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">DOM XSS in jQuery anchor href attribute sink using location.search source – PortSwigger Write Up
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p class="page__meta">
+          
+            <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2022-08-31T00:00:00+02:00">August 31, 2022 </time>&emsp;
+          
+          
+        </p>
+        <p>En este post vamos a estar resolviendo el laboratorio: “DOM XSS in jQuery anchor href attribute sink using location.search source”:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/1.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>En este caso, para resolver el laboratorio tenemos que ejecutar un <code class="language-plaintext highlighter-rouge">alert</code> que nos devuelva las cookies.</p>
+
+<p>Lo primero de todo es acceder al laboratorio:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/2.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>Una vez accedidos, nos dirigimos a la parte de enviar feedback, ya que, en el enunciado es donde se nos indica que se encuentra el XSS:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/3.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/4.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>Cuando accedemos, si nos fijamos en la <code class="language-plaintext highlighter-rouge">URL</code>, podemos ver que de forma por defecto se nos añade el parámetro <code class="language-plaintext highlighter-rouge">returnPath</code>:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/5.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>Vamos a probar a añadirle cualquier valor al parámetro:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/6.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>En principio no pasa nada, pero si ponemos el ratón encima del hiperenlace de “Back”:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/7.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>Vemos como el valor que hemos colocado en la variable, se implemente en el atributo href de este elemento. Por lo que es tan sencillo como colocar un payload que nos ejecute el alert cuando demos click en el botón:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ javascript:alert(document.cookie)
+</code></pre></div></div>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/8.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>Como vemos, conseguimos resolver el laboratorio, y desde el punto de vista del código fuente, lo que hemos conseguido es lo siguiente:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/9.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>Ahora, si damos click en el hiperenlace “Back”:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/10.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>Se nos ejecutará el código Javascript que hemos indicado:</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/dom_xss_in_jquery_ anchor_href_attribute_sink_using_location.search_source/11.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>¡Un saludo y espero que os sirva de apoyo!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#burpsuite" class="page__taxonomy-item" rel="tag">Burpsuite</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#javascript" class="page__taxonomy-item" rel="tag">JavaScript</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#xss" class="page__taxonomy-item" rel="tag">XSS</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#portswigger" class="page__taxonomy-item" rel="tag">Portswigger</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Fecha:</strong> <time datetime="2022-08-31T00:00:00+02:00">August 31, 2022</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/dom-xss-document.write-sink/" class="pagination--pager" title="DOM XSS in document.write sink using source location.search – PortSwigger Write Up
+">Previous</a>
+    
+    
+      <a href="/dom-xss-sink-using-location-search/" class="pagination--pager" title="DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Aitorgg02</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
