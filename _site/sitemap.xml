@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/evil-trust/</loc>
-<lastmod>2020-02-02T00:00:00+01:00</lastmod>
+<loc>http://localhost:4000/dom-xss-document.write-sink/</loc>
+<lastmod>2022-08-31T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/oswp-preparacion/</loc>
-<lastmod>2020-02-04T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/como-crear-un-sistema-linux/</loc>
-<lastmod>2020-04-23T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/antena-casera-largo-alcance/</loc>
-<lastmod>2020-11-29T00:00:00+01:00</lastmod>
+<loc>http://localhost:4000/dom-xss-sink-using-location-search/</loc>
+<lastmod>2022-08-31T00:00:00+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/reflected-xss-into-html/</loc>
+<lastmod>2022-08-31T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/stored-xss-into-html/</loc>
 <lastmod>2022-08-31T00:00:00+02:00</lastmod>
 </url>
 <url>

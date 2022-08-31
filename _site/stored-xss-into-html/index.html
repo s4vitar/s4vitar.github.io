@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>            Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up - Aitor      Ciberseguridad y Hacking Ético      </title>
-<meta name="description" content="En este post vamos a estar resolviendo el laboratorio de PortSwigger: “Reflected XSS into HTML context with nothing encoded.">
+<!-- begin _includes/seo.html --><title>            Stored XSS into HTML context with nothing encoded – PortSwigger Write Up - Aitor      Ciberseguridad y Hacking Ético      </title>
+<meta name="description" content="En este post vamos a estar resolviendo el laboratorio de PortSwigger: “Stored XSS into HTML context with nothing encoded.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Aitor | Ciberseguridad y Hacking Ético">
-<meta property="og:title" content="Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up">
-<meta property="og:url" content="http://localhost:4000/reflected-xss-into-html/">
+<meta property="og:title" content="Stored XSS into HTML context with nothing encoded – PortSwigger Write Up">
+<meta property="og:url" content="http://localhost:4000/stored-xss-into-html/">
 
 
-  <meta property="og:description" content="En este post vamos a estar resolviendo el laboratorio de PortSwigger: “Reflected XSS into HTML context with nothing encoded.">
+  <meta property="og:description" content="En este post vamos a estar resolviendo el laboratorio de PortSwigger: “Stored XSS into HTML context with nothing encoded.">
 
 
 
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/reflected-xss-into-html/">
+<link rel="canonical" href="http://localhost:4000/stored-xss-into-html/">
 
 
 
@@ -164,7 +164,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up</li>
+        <li class="current">Stored XSS into HTML context with nothing encoded – PortSwigger Write Up</li>
       
     
   </ol>
@@ -287,15 +287,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up">
-    <meta itemprop="description" content="En este post vamos a estar resolviendo el laboratorio de PortSwigger: “Reflected XSS into HTML context with nothing encoded.">
+    <meta itemprop="headline" content="Stored XSS into HTML context with nothing encoded – PortSwigger Write Up">
+    <meta itemprop="description" content="En este post vamos a estar resolviendo el laboratorio de PortSwigger: “Stored XSS into HTML context with nothing encoded.">
     <meta itemprop="datePublished" content="August 31, 2022">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up
+          <h1 id="page-title" class="page__title" itemprop="headline">Stored XSS into HTML context with nothing encoded – PortSwigger Write Up
 </h1>
           
         </header>
@@ -309,48 +309,61 @@
           
           
         </p>
-        <p>En este post vamos a estar resolviendo el laboratorio de PortSwigger: “Reflected XSS into HTML context with nothing encoded.”</p>
+        <p>En este post vamos a estar resolviendo el laboratorio de PortSwigger: “Stored XSS into HTML context with nothing encoded.”</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/xss_into_html_context_with_nothing_encoded/1.png" width="1000" />
+     <img src="/assets/images/portswigger/stored_xss_into_html_context_with_nothing_encoded/1.png" width="1000" />
 </p>
 <p><br /></p>
 
-<p>Para resolver el laboratorio tenemos que realizar un Cross-site-Scripting (XSS) que llame a una función alert.</p>
+<p>Para resolver el laboratorio tenemos que realizar un Cross-site-Scripting (XSS) que llame a una <code class="language-plaintext highlighter-rouge">función alert</code> en un comentario de una publicación.</p>
 
-<p>Cuando entramos en el laboratorio, vemos un campo de búsqueda:</p>
+<p>Cuando entramos en el laboratorio lo primero que tenemos que hacer es dirigirnos a un post cualquiera.</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/xss_into_html_context_with_nothing_encoded/2.png" width="1000" />
+     <img src="/assets/images/portswigger/stored_xss_into_html_context_with_nothing_encoded/2.png" width="1000" />
 </p>
 <p><br /></p>
 
-<p>Vamos a probar a buscar cualquier cosa:</p>
+<p>Dentro del post, encontramos lo siguiente:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/xss_into_html_context_with_nothing_encoded/3.png" width="1000" />
+     <img src="/assets/images/portswigger/stored_xss_into_html_context_with_nothing_encoded/3.png" width="1000" />
 </p>
 <p><br /></p>
 
-<p>Como podemos observar en la siguiente imagen en la <strong>URL</strong>, hemos buscado <strong>hola</strong> para ver que nos responde la web.</p>
+<p>Como podemos ver tenemos la opción de dejar un comentario, y distintos campos a rellenar.</p>
+
+<p>Por lo que nosotros simplemente vamos a hacerle caso, y vamos a rellenar todos los campos, eso si, en el campo del comentario, colocaremos un pequeño código JavaScript que nos ejecute un <code class="language-plaintext highlighter-rouge">alert</code>:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/xss_into_html_context_with_nothing_encoded/4.png" width="1000" />
+     <img src="/assets/images/portswigger/stored_xss_into_html_context_with_nothing_encoded/4.png" width="1000" />
 </p>
 <p><br /></p>
 
-<p>Si nos fijamos, el término de búsqueda se ve reflejado en la web. Por lo que, podemos probar a meter un código Javascript usando el atributo onerror en el tag <img />.</p>
-
-<p>De tal forma, que si falla al cargar la imagen que especificamos en el atributo src, se nos ejecutará lo que escribimos en onerror:</p>
+<p>Con todos los campos rellenados, simplemente enviamos el comentario y habremos resuelto el laboratorio:</p>
 
 <p align="center">
-     <img src="/assets/images/portswigger/xss_into_html_context_with_nothing_encoded/5.png" width="1000" />
+     <img src="/assets/images/portswigger/stored_xss_into_html_context_with_nothing_encoded/5.png" width="1000" />
 </p>
 <p><br /></p>
 
-<p><strong>Laboratorio resuelto</strong></p>
+<p>Para ver que ha ocurrido, vamos a volver al post done hemos escrito nuestro comentario:</p>
+
 <p align="center">
-     <img src="/assets/images/portswigger/xss_into_html_context_with_nothing_encoded/6.png" width="1000" />
+     <img src="/assets/images/portswigger/stored_xss_into_html_context_with_nothing_encoded/6.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/stored_xss_into_html_context_with_nothing_encoded/7.png" width="1000" />
+</p>
+<p><br /></p>
+
+<p>Y como vemos, al entrar en el post, se nos ejecuta el código que habíamos escrito en el campo de comentario. Acabamos de explotar un <code class="language-plaintext highlighter-rouge">Stored XSS</code>.</p>
+
+<p align="center">
+     <img src="/assets/images/portswigger/stored_xss_into_html_context_with_nothing_encoded/8.png" width="1000" />
 </p>
 <p><br /></p>
 
@@ -420,12 +433,11 @@
       
   <nav class="pagination">
     
-      <a href="/dom-xss-sink-using-location-search/" class="pagination--pager" title="DOM XSS in innerHTML sink using source location.search – PortSwigger Write Up
+      <a href="/reflected-xss-into-html/" class="pagination--pager" title="Reflected XSS into HTML context with nothing encoded – PortSwigger Write Up
 ">Previous</a>
     
     
-      <a href="/stored-xss-into-html/" class="pagination--pager" title="Stored XSS into HTML context with nothing encoded – PortSwigger Write Up
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
